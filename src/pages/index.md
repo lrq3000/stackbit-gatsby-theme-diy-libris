@@ -14,7 +14,6 @@ sections:
       - label: Learn More
         url: /features
         style: secondary
-    image: images/circadiaware-logo.png
     media_position: top
     media_width: fourty
     align: left
