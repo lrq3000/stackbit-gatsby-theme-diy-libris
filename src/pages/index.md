@@ -30,6 +30,15 @@ sections:
         image_align: center
       - image: images/logo-2.svg
         image_align: center
+        actions:
+          - label: lorem-ipsum
+            url: lorem-ipsum
+            style: link
+            has_icon: false
+            icon: arrow-left
+            icon_position: right
+            new_window: false
+            type: action
       - image: images/logo-3.svg
         image_align: center
       - image: images/logo-4.svg
