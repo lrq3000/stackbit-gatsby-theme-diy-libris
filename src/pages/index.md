@@ -14,7 +14,7 @@ sections:
       - label: Learn More
         url: /features
         style: secondary
-    image: images/classic/hero.png
+    image: images/circadiaware-logo.png
     media_position: top
     media_width: fifty
     align: left
