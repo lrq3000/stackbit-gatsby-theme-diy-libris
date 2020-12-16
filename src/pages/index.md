@@ -16,7 +16,7 @@ sections:
         style: secondary
     image: images/circadiaware-logo.png
     media_position: top
-    media_width: fifty
+    media_width: fourty
     align: left
     padding_top: large
     padding_bottom: large
