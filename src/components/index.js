@@ -9,6 +9,8 @@ import BlogPostTags from './BlogPostTags';
 import CtaSection from './CtaSection';
 import Feature from './Feature';
 import FeaturesSection from './FeaturesSection';
+import DocsMenu from './DocsMenu';
+import DocsSubmenu from './DocsSubmenu';
 import Footer from './Footer';
 import FooterMenu from './FooterMenu';
 import FormField from './FormField';
@@ -18,6 +20,7 @@ import GridSection from './GridSection';
 import Header from './Header';
 import HeaderMenu from './HeaderMenu';
 import HeroSection from './HeroSection';
+import SectionDocs from './SectionDocs';
 import Icon from './Icon';
 import SectionActions from './SectionActions';
 import Layout from './Layout';
@@ -34,6 +37,8 @@ export {
     CtaSection,
     Feature,
     FeaturesSection,
+    DocsMenu,
+    DocsSubmenu,
     Footer,
     FooterMenu,
     FormField,
@@ -43,6 +48,7 @@ export {
     Header,
     HeaderMenu,
     HeroSection,
+    SectionDocs,
     Icon,
     SectionActions,
     Layout
@@ -60,6 +66,8 @@ export default {
     CtaSection,
     Feature,
     FeaturesSection,
+    DocsMenu,
+    DocsSubmenu,
     Footer,
     FooterMenu,
     FormField,
@@ -69,6 +77,7 @@ export default {
     Header,
     HeaderMenu,
     HeroSection,
+    SectionDocs,
     Icon,
     SectionActions,
     Layout

@@ -2,7 +2,33 @@
     "description": "A \"do it yourself\" theme for Stackbit",
     "layout": "boxed",
     "style": "classic",
-    "palette": "green",
+    "palette": "blue",
+    "palettes": {
+        "blue": {
+            "sass": {
+                "accent1": "#00c6ff",
+                "accent2": "#0072ff"
+            }
+        },
+        "green": {
+            "sass": {
+                "accent1": "#12db5d",
+                "accent2": "#11998e"
+            }
+        },
+        "navy": {
+            "sass": {
+                "accent1": "#004e92",
+                "accent2": "#000428"
+            }
+        },
+        "violet": {
+            "sass": {
+                "accent1": "#8e2de2",
+                "accent2": "#4a00e0"
+            }
+        }
+    },
     "mode": "light",
     "base_font": "sans-serif",
     "header": {
@@ -29,6 +55,12 @@
                 "label": "Blog",
                 "url": "/blog",
                 "style": "link"
+            },
+            {
+                "label": "Docs",
+                "url": "/docs",
+                "style": "link",
+                "has_subnav": false
             },
             {
                 "label": "Style Guide",
