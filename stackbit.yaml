@@ -16,6 +16,8 @@ logicFields:
   - grid_section.background_image_opacity
   - cta_section.background_image_opacity
   - form_section.background_image_opacity
+  - doc_sections.root_docs_path
+  - doc_sections.sections
 models:
   config:
     type: config
@@ -396,6 +398,29 @@ models:
         description: >-
           The featured image position in the blog post relative to the post
           header content
+  doc_sections:
+    type: data
+    file: doc_sections.yml
+    label: Documentation Sections
+    fields:
+      - type: string
+        name: root_docs_path
+        label: Root Documentation URL Path
+        description: >-
+          The URL path under which the documentation pages will be generated.
+          For example, value "/" will place all documentation pages at the site
+          root, while value "/docs" will place all documentation pages under the
+          "/docs" path.
+        default: /docs
+        required: true
+      - type: list
+        name: sections
+        label: Sections
+        description: >-
+          The main sections of the documentation. Every item must be the URL
+          slug representing the section.
+        items:
+          type: string
   advanced:
     type: page
     label: Advanced page
