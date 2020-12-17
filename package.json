@@ -10,6 +10,7 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
+    "@deckdeckgo/highlight-code": "^2.2.2",
     "@stackbit/gatsby-plugin-menus": "0.0.4",
     "chokidar": "^3.4.0",
     "classnames": "^2.2.6",
@@ -18,8 +19,9 @@
     "gatsby-plugin-react-helmet": "^3.3.3",
     "gatsby-plugin-sass": "^2.3.12",
     "gatsby-plugin-sharp": "^2.11.1",
+    "gatsby-remark-highlight-code": "^2.1.1",
     "gatsby-source-filesystem": "2.3.10",
-    "gatsby-transformer-remark": "2.8.14",
+    "gatsby-transformer-remark": "^2.8.14",
     "js-yaml": "^3.12.2",
     "lodash": "^4.17.11",
     "marked": "^0.6.1",

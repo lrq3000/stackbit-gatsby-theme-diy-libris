@@ -1,3 +1,4 @@
+// Layout for the docs section, this comes from StackBit's Libris theme: https://github.com/stackbithq/stackbit-theme-libris
 import React from 'react';
 import _ from 'lodash';
 import {graphql} from 'gatsby';
@@ -5,6 +6,10 @@ import {graphql} from 'gatsby';
 import {Layout} from '../components/index';
 import DocsMenu from '../components/DocsMenu';
 import {htmlToReact, getPages, Link, withPrefix} from '../utils';
+
+// Code syntax highlighter
+import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
+deckDeckGoHighlightElement();
 
 // this minimal GraphQL query ensures that when 'gatsby develop' is running,
 // any changes to content files are reflected in browser

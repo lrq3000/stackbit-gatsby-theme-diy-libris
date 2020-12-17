@@ -7,7 +7,16 @@ module.exports = {
         `gatsby-plugin-react-helmet`,
         `gatsby-source-data`,
         `gatsby-plugin-sharp`,
-        `gatsby-transformer-remark`,
+        {
+            resolve: `gatsby-transformer-remark`,
+            options: {
+                plugins: [
+                    {
+                      resolve: `gatsby-remark-highlight-code`
+                    },
+                ],
+            },
+        },
         {
             resolve: `gatsby-source-filesystem`,
             options: {
