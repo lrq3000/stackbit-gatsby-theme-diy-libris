@@ -16,9 +16,6 @@ logicFields:
   - grid_section.background_image_opacity
   - cta_section.background_image_opacity
   - form_section.background_image_opacity
-  - doc_sections.root_docs_path
-  - doc_sections.sections
-  - docs.weight
 models:
   config:
     type: config
@@ -399,55 +396,6 @@ models:
         description: >-
           The featured image position in the blog post relative to the post
           header content
-  doc_sections:
-    type: data
-    file: doc_sections.yml
-    label: Documentation Sections
-    fields:
-      - type: string
-        name: root_docs_path
-        label: Root Documentation URL Path
-        description: >-
-          The URL path under which the documentation pages will be generated.
-          For example, value "/" will place all documentation pages at the site
-          root, while value "/docs" will place all documentation pages under the
-          "/docs" path.
-        default: /docs
-        required: true
-      - type: list
-        name: sections
-        label: Sections
-        description: >-
-          The main sections of the documentation. Every item must be the URL
-          slug representing the section.
-        items:
-          type: string
-  docs:
-    type: page
-    urlPath: '/docs/{slug}'
-    label: Documentation Pages
-    layout: docs
-    folder: docs
-    fields:
-      - type: string
-        name: title
-        label: Title
-        description: >-
-          The title of the page, used both as a page title and as a navigation
-          menu title.
-        required: true
-      - type: number
-        name: weight
-        label: Weight
-        description: >-
-          The navigation order of the documentation page. This value is ignored
-          for parent section pages.
-      - type: string
-        name: excerpt
-        label: Excerpt
-        description: >-
-          Short description of the documentation section. This value is used in
-          documentation overview section and meta data.
   advanced:
     type: page
     label: Advanced page
@@ -477,7 +425,6 @@ models:
             - blog_feed_section
             - cta_section
             - form_section
-            - section_docs
   hero_section:
     type: object
     label: Hero section
@@ -1378,25 +1325,6 @@ models:
           - no-repeat
         default: no-repeat
         description: Repeat the image to cover the whole area
-  section_docs:
-    type: object
-    label: Documentation Overview Section
-    extends:
-      - section
-    fields:
-      - type: string
-        name: subtitle
-        label: Subtitle
-        description: The subtitle of the section.
-      - type: enum
-        name: col_number
-        label: Columns
-        description: The number of documentation sections in a row.
-        options:
-          - two
-          - three
-        default: three
-        required: true
   feature:
     type: object
     label: Feature
