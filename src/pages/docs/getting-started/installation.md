@@ -129,8 +129,6 @@ You can build tables with markdown to help you organize information. To add a ta
 
 <hr>
 
-test
-
 We’ve packed this theme with powerful features to help you have awesome documentation for your current or next project.
 
 **Why not start using this theme today?**
