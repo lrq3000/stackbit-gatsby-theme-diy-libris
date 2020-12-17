@@ -6,7 +6,13 @@ This is a [Gatsby](https://gatsbyjs.com) site using Git as a [CMS](https://en.wi
 
 It combines the [DIY theme](https://github.com/stackbithq/stackbit-theme-diy), which provides more extensive customization than other themes, and detailed blog posts with tags, categories, author and frontmatter image positioning, with the [Libris theme](https://github.com/stackbithq/stackbit-theme-libris)'s docs section, providing a MDX-based documentation that can also be edited in Stackbit Studio's visual editor.
 
+## Install
+
 You can create a site on Stackbit and import this repository to kickstart your own showcase+documentation website.
+
+## Missing features
+
+The SectionDocs component could not be included due to some weird errors. The component is still there but it's not working and won't show up in the Stackbit Studio's visual editor.
 
 ## License
 

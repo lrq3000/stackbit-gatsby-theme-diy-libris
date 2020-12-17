@@ -477,7 +477,6 @@ models:
             - blog_feed_section
             - cta_section
             - form_section
-            - section_docs
   hero_section:
     type: object
     label: Hero section
@@ -1378,25 +1377,6 @@ models:
           - no-repeat
         default: no-repeat
         description: Repeat the image to cover the whole area
-  section_docs:
-    type: object
-    label: Documentation Overview Section
-    extends:
-      - section
-    fields:
-      - type: string
-        name: subtitle
-        label: Subtitle
-        description: The subtitle of the section.
-      - type: enum
-        name: col_number
-        label: Columns
-        description: The number of documentation sections in a row.
-        options:
-          - two
-          - three
-        default: three
-        required: true
   feature:
     type: object
     label: Feature
