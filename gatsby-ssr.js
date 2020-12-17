@@ -15,6 +15,8 @@ exports.onRenderBody = function({ setHeadComponents, setPostBodyComponents }) {
 
     setPostBodyComponents([
         <React.Fragment>
+            <script src={withPrefix('assets/js/plugins.js')}/>
+            //<script src={withPrefix('assets/js/prism.js')}/>
             <script src={withPrefix('assets/js/init.js')}/>
             <script src={withPrefix('assets/js/page-load.js')}/>
             <script src={withPrefix('assets/js/page-unload.js')}/>

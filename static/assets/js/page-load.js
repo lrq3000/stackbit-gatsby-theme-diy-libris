@@ -3,4 +3,5 @@ window.addMainNavigationHandlers();
 window.addAnnouncementHandlers();
 window.addVideoEmbedsHandlers();
 window.addDocsNavigationHandlers();
+window.addPageNavLinks();
 };
