@@ -22,7 +22,10 @@ export default class Docs extends React.Component {
         let current_page_url = _.trim(_.get(this.props, 'pageContext.url', null), '/');
         return (
             <Layout {...this.props}>
-            <div className="inner outer">
+                {
+            // use docs-css style to isolate the docs.scss stylesheet just for the docs section, thanks to https://github.com/gatsbyjs/gatsby/issues/3446#issuecomment-604115237
+                }
+            <div className="inner outer docs-css">
               <div className="docs-content">
                 <DocsMenu {...this.props} page={this.props.pageContext} site={this.props.pageContext.site} />
                 <article className="post type-docs">

@@ -4,8 +4,9 @@
 @import "abstracts/variables";
 
 // Base
-@import "base/reset";
+@import "base/reset";  // reset browser's default styling
 @import "base/base";
+//@import "base/general";
 
 // Utilities
 @import "utilities/grid";
@@ -46,20 +47,6 @@
 $font: (
   primary: ("Lato", Helvetica, Arial, sans-serif),
   monospace: (Monaco, courier, monospace)
-);
-
-// Palette.
-
-$palette: (
-  primary:           #424b5f,
-  secondary:         #283040,
-  meta:              #67758d,
-  border:            #dee5ef,
-  bg:                #f7f9fb,
-  note:              #fcb41d,
-  important:         #fc381d,
-  accent:            getPaletteKey(accent1),
-  accent-alt:        getPaletteKey(accent2),
 );
 
 @import "../../static/assets/css/fontawesome.min.css";
