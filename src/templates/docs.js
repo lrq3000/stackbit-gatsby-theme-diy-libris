@@ -1,5 +1,4 @@
-// Layout for the docs section, this comes from StackBit's Libris theme: https://github.com/stackbithq/stackbit-theme-libris
-import React from 'react';
+import React from 'react';  // Layout for the docs section, this comes from StackBit's Libris theme: https://github.com/stackbithq/stackbit-theme-libris
 import _ from 'lodash';
 import {graphql} from 'gatsby';
 
