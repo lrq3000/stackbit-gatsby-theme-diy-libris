@@ -18,6 +18,7 @@ logicFields:
   - form_section.background_image_opacity
   - doc_sections.root_docs_path
   - doc_sections.sections
+  - docs.weight
 models:
   config:
     type: config
@@ -421,6 +422,32 @@ models:
           slug representing the section.
         items:
           type: string
+  docs:
+    type: page
+    urlPath: '/docs/{slug}'
+    label: Documentation Pages
+    layout: docs
+    folder: docs
+    fields:
+      - type: string
+        name: title
+        label: Title
+        description: >-
+          The title of the page, used both as a page title and as a navigation
+          menu title.
+        required: true
+      - type: number
+        name: weight
+        label: Weight
+        description: >-
+          The navigation order of the documentation page. This value is ignored
+          for parent section pages.
+      - type: string
+        name: excerpt
+        label: Excerpt
+        description: >-
+          Short description of the documentation section. This value is used in
+          documentation overview section and meta data.
   advanced:
     type: page
     label: Advanced page
