@@ -4,6 +4,7 @@
 
 .docs-css {
 // Apply only to the docs section of the site
+font-size: 80%;
 
 // Palette.
 $palette: (
@@ -669,7 +670,6 @@ img {
 
 .post.type-docs {
   margin-bottom: 5.625em;
-  max-width: 800px;
 
   h1 {
     font-size: 1.875rem;
@@ -828,7 +828,7 @@ img {
   border-left: 1px solid map-get($palette, border);
   color: map-get($palette, primary);
   display: none;
-  font-size: 0.875rem;
+  font-size: 90%;
   font-weight: normal;
   list-style: none;
   margin-top: 0.625rem;
@@ -943,7 +943,7 @@ img {
 
   .docs-nav {
     padding-right: 1.5em;
-    width: 12.5em;
+    width: 14.5em;
   }
 
   .page-nav {
@@ -978,11 +978,13 @@ img {
   }
 
   .docs-menu--opened {
+    // open docs dropdown menu on mobile, this gets activated when the class .docs-menu--opened gets added to the div docs-css, which is done in assets/js/init.js in function docsNavToggleHandler which is attached as an on-click event through page-load.js and page-unload.js
     .docs-nav-menu {
       display: block;
     }
 
     .docs-nav-toggle {
+    // Change the docs mobile menu icon (arrow) to point downward
       .icon-angle-right {
         -webkit-transform: rotate(135deg);
         transform: rotate(135deg);

@@ -101,3 +101,46 @@ window.removeAnnouncementHandlers = function() {
 		anncmntClose.removeEventListener('click', announcementCloseHandler, false);
 	}
 }
+
+// Handle docs navigation menu toggling on small screens
+function docsNavToggleHandler(e) {
+  e.preventDefault();
+  //document.body.classList.toggle('docs-menu--opened');
+  document.getElementsByClassName('docs-content')[0].classList.toggle('docs-menu--opened'); // can't attach to body since we limit the scope of the docs.scss to the div docs-content (the one just below div with class docs-css), so we add the docs-menu--opened class to it instead of body
+}
+// Handle submenu toggling
+function submenuToggleHandler(e) {
+  e.preventDefault();
+  this.parentNode.classList.toggle('active');
+}
+
+window.addDocsNavigationHandlers = function() {
+  const docsNavToggle = document.getElementById('docs-nav-toggle');
+  if (docsNavToggle) {
+    docsNavToggle.addEventListener('click', docsNavToggleHandler, false);
+  }
+
+  const docsSubmenuToggle = document.querySelectorAll('.docs-submenu-toggle');
+  if (docsSubmenuToggle) {
+    for (let i = 0; i < docsSubmenuToggle.length; i++) {
+      docsSubmenuToggle[i].addEventListener('click', submenuToggleHandler, false);
+    }
+  }
+};
+
+window.removeDocsNavigationHandlers = function() {
+  // Remove docs nav related classes on page load
+  document.body.classList.remove('docs-menu--opened');
+
+  const docsNavToggle = document.getElementById('docs-nav-toggle');
+  if (docsNavToggle) {
+    docsNavToggle.removeEventListener('click', docsNavToggleHandler, false);
+  }
+
+  const docsSubmenuToggle = document.querySelectorAll('.docs-submenu-toggle');
+  if (docsSubmenuToggle) {
+    for (let i = 0; i < docsSubmenuToggle.length; i++) {
+      docsSubmenuToggle[i].removeEventListener('click', submenuToggleHandler, false);
+    }
+  }
+};
