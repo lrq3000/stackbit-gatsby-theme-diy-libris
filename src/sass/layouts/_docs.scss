@@ -3,6 +3,7 @@
  */
 
 .docs-css {
+// Apply only to the docs section of the site
 
 // Palette.
 $palette: (
@@ -693,7 +694,7 @@ img {
 
   .hash-link {
     border: 0;
-    color: _palette(meta);
+    color: map-get($palette, meta);
     display: inline-block;
     margin-left: -21px;
     opacity: 0;
@@ -721,7 +722,7 @@ img {
 
   .post-inside {
     background: #fff;
-    border: 1px solid _palette(border);
+    border: 1px solid map-get($palette, border);
     border-radius: 5px;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08);
     box-sizing: border-box;
@@ -759,17 +760,17 @@ img {
   }
 
   .docs-item-link {
-    border: 1px solid _palette(border);
+    border: 1px solid map-get($palette, border);
     border-radius: 3px;
-    color: _palette(secondary);
+    color: map-get($palette, secondary);
     display: block;
     font-weight: bold;
     padding: 0.9375em;
     position: relative;
 
     &:hover {
-      border-color: _palette(accent);
-      color: _palette(accent);
+      border-color: map-get($palette, accent);
+      color: map-get($palette, accent);
     }
   }
 }
@@ -778,7 +779,7 @@ img {
   margin-bottom: 1.875em;
 
   .docs-nav-toggle {
-    color: _palette(secondary);
+    color: map-get($palette, secondary);
     font-size: 1.125rem;
     height: 30px;
     margin: 0;
@@ -789,7 +790,7 @@ img {
   }
 
   .docs-submenu-toggle {
-    color: _palette(meta);
+    color: map-get($palette, meta);
     height: 30px;
     position: absolute;
     right: 0;
@@ -799,11 +800,12 @@ img {
 }
 
 .docs-menu {
-  color: _palette(secondary);
+  color: map-get($palette, secondary);
   font-weight: bold;
   line-height: 1.5;
   list-style: none;
   margin: 0;
+  margin-left: 1.2em;
   padding: 0;
 
   & > .docs-menu-item > a {
@@ -817,14 +819,14 @@ img {
 
     &:hover,
     &:focus {
-      color: _palette(accent);
+      color: map-get($palette, accent);
     }
   }
 }
 
 .docs-submenu {
-  border-left: 1px solid _palette(border);
-  color: _palette(primary);
+  border-left: 1px solid map-get($palette, border);
+  color: map-get($palette, primary);
   display: none;
   font-size: 0.875rem;
   font-weight: normal;
@@ -839,7 +841,7 @@ img {
 
   &.current,
   &.current-parent {
-    color: _palette(accent);
+    color: map-get($palette, accent);
   }
 
   &.has-children {
@@ -876,7 +878,7 @@ img {
     padding: 0;
 
     ul {
-      border-left: 1px solid _palette(border);
+      border-left: 1px solid map-get($palette, border);
       margin-top: 0.625rem;
       padding-left: 1.25rem;
     }
@@ -886,18 +888,18 @@ img {
     margin-bottom: 0.625rem;
 
     &.active > a {
-      color: _palette(accent);
+      color: map-get($palette, accent);
     }
   }
 
   a {
-    color: _palette(primary);
+    color: map-get($palette, primary);
     border: 0;
     display: block;
 
     &:hover,
     &:focus {
-      color: _palette(accent);
+      color: map-get($palette, accent);
     }
   }
 }
@@ -963,7 +965,7 @@ img {
 @media only screen and (max-width: 800px) {
   .docs-nav {
     background: #fff;
-    border: 1px solid _palette(border);
+    border: 1px solid map-get($palette, border);
     border-radius: 5px;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08);
     box-sizing: border-box;
@@ -989,7 +991,7 @@ img {
   }
 
   .docs-menu {
-    border-top: 1px solid _palette(border);
+    border-top: 1px solid map-get($palette, border);
     margin-top: 1.25rem;
     padding-top: 1.25rem;
   }
