@@ -12,6 +12,16 @@ It combines the [DIY theme](https://github.com/stackbithq/stackbit-theme-diy), w
 
 ## Install
 
+### Locally
+Install node.js (preferably version 14.15.1). Install git.
+
+Then launch a git commandline, clone this repository somewhere, cd inside, and then type:
+
+`npm install && npm run build && gatsby develop`
+
+This will install gatsby, install the necessary plugins and build the gatsby website (and search index), and then launch a local development server (default port: 8000, hence open the address http://localhost:8000 to access the website locally once gatsby is running).
+
+### Deployment online
 You can create a site on Stackbit and import this repository to kickstart your own showcase+documentation website.
 
 ## Additional features
