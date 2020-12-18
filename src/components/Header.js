@@ -4,6 +4,7 @@ import _ from 'lodash';
 import {Link, withPrefix} from '../utils';
 import Icon from './Icon';
 import HeaderMenu from './HeaderMenu';
+import Search from './Search'
 
 export default class Header extends React.Component {
     render() {
@@ -31,6 +32,7 @@ export default class Header extends React.Component {
             							{(_.get(this.props, 'pageContext.site.siteMetadata.header.has_primary_nav', null) && _.get(this.props, 'pageContext.site.siteMetadata.header.primary_nav_links', null)) && (
             								<HeaderMenu {...this.props} header_menu={_.get(this.props, 'pageContext.site.siteMetadata.header.primary_nav_links', null)} page={this.props.pageContext} />
             							)}
+                                        <Search classNames={'link_bold'} lng="en"/>
             							{(_.get(this.props, 'pageContext.site.siteMetadata.header.has_secondary_nav', null) && _.get(this.props, 'pageContext.site.siteMetadata.header.secondary_nav_links', null)) && (
             								<HeaderMenu {...this.props} header_menu={_.get(this.props, 'pageContext.site.siteMetadata.header.secondary_nav_links', null)} page={this.props.pageContext} />
             							)}
