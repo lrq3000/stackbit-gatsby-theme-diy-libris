@@ -2,9 +2,6 @@ const siteMetadata = require('./site-metadata.json')
 
 // for lunr plugin
 const { isNil } = require('lodash')
-const mapPagesUrls = {
-  index: '/',
-}
 
 module.exports = {
     pathPrefix: '/',
