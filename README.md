@@ -6,9 +6,17 @@ This is a [Gatsby](https://gatsbyjs.com) site using Git as a [CMS](https://en.wi
 
 It combines the [DIY theme](https://github.com/stackbithq/stackbit-theme-diy), which provides more extensive customization than other themes, and detailed blog posts with tags, categories, author and frontmatter image positioning, with the [Libris theme](https://github.com/stackbithq/stackbit-theme-libris)'s docs section, providing a MDX-based documentation that can also be edited in Stackbit Studio's visual editor.
 
+## Preview
+
+[Click here for a preview on Netlify](https://stackbit-gatsby-theme-diy-libris.netlify.app/).
+
 ## Install
 
 You can create a site on Stackbit and import this repository to kickstart your own showcase+documentation website.
+
+## Additional features
+* Automatic code syntax highlighting in MDX files using [gatsby-remark-highlight-code](https://www.gatsbyjs.com/plugins/gatsby-remark-highlight-code/) (Prism was disabled by default, and it required specifying the language).
+* Local search engine using [gatsby-plugin-lunr](https://github.com/humanseelabs/gatsby-plugin-lunr).
 
 ## Missing features
 
