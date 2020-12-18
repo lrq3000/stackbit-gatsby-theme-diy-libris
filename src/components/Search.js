@@ -1,7 +1,6 @@
 import React from 'react';
-import _ from 'lodash';
 
-import { Link, withPrefix } from 'gatsby'
+import { Link } from 'gatsby'
 
 export default class Search extends React.Component {
   state = {
@@ -12,7 +11,7 @@ export default class Search extends React.Component {
   render() {
     return (
       <div className={this.props.classNames}>
-        <input className='search__input' type='text' value={this.state.query} onChange={this.search} placeholder={'Search'} />
+        <input className='search__input' type='text' value={this.state.query} onChange={this.search} placeholder={'Search'} aria-label="Search" />
         <ul className='search__list'>
           {this.state.results.map((page) => (
           <li key={page.url}>
