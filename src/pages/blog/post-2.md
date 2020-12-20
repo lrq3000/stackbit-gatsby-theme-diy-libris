@@ -4,7 +4,7 @@ subtitle: >-
   Idemque diviserunt naturam hominis in animum et corpus. Si enim ad populum me
   vocas, eum.
 date: '2020-05-25'
-author: src/data/team/hilary-ouse.yaml
+author: src/data/people/hilary-ouse.yaml
 categories:
   - src/data/categories/news.yaml
   - src/data/categories/general.yaml
@@ -18,6 +18,7 @@ thumb_image: /images/classic/post-2.png
 image: /images/classic/post-2.png
 image_position: left
 template: post
+cmseditable: true
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Negat esse eam, inquit, propter se expetendam. Nam de isto magna dissensio est. Nullum inveniri verbum potest quod magis idem declaret Latine, quod Graece, quam declarat voluptas. Idemne potest esse dies saepius, qui semel fuit? Non est ista, inquam, Piso, magna dissensio. Ita multo sanguine profuso in laetitia et in victoria est mortuus. Quasi vero, inquit, perpetua oratio rhetorum solum, non etiam philosophorum sit. Duo Reges: constructio interrete.

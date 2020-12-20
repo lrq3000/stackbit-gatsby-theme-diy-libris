@@ -253,7 +253,7 @@ models:
   person:
     type: data
     label: Person
-    folder: team
+    folder: people
     fields:
       - type: string
         name: id

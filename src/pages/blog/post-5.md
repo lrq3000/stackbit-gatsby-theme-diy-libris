@@ -4,7 +4,7 @@ subtitle: >-
   Sit amet consectetur adipiscing elit pellentesque habitant morbi tristique
   senectus.
 date: '2020-06-02'
-author: src/data/team/gustav-purpleson.yaml
+author: src/data/people/gustav-purpleson.yaml
 categories:
   - src/data/categories/tutorials.yaml
 tags:
@@ -18,6 +18,7 @@ thumb_image: /images/classic/post-5.png
 image: /images/classic/post-5.png
 image_position: right
 template: post
+cmseditable: true
 ---
 
 Donec ultrices tincidunt arcu non sodales neque. Et netus et malesuada fames ac turpis egestas sed tempus. Cras pulvinar mattis nunc sed. Turpis cursus in hac habitasse platea dictumst quisque sagittis. Sollicitudin nibh sit amet commodo nulla facilisi nullam. Posuere ac ut consequat semper viverra nam. Ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus. Egestas sed sed risus pretium quam vulputate dignissim suspendisse in. Tempor orci eu lobortis elementum nibh. Senectus et netus et malesuada fames ac turpis egestas integer. Id cursus metus aliquam eleifend mi in nulla posuere sollicitudin. Sed nisi lacus sed viverra tellus. Non curabitur gravida arcu ac tortor dignissim convallis aenean.

@@ -1,5 +1,6 @@
 ---
 title: Blog
+cmseditable: false
 sections:
   - type: hero_section
     title: Blog

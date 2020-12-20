@@ -4,7 +4,7 @@ subtitle: >-
   Negat esse eam, inquit, propter se expetendam. Ergo, si semel tristior
   effectus est, hilara vita amissa est.
 date: '2020-05-30'
-author: src/data/team/dianne-ameter.yaml
+author: src/data/people/dianne-ameter.yaml
 categories:
   - src/data/categories/tutorials.yaml
   - src/data/categories/news.yaml
@@ -19,6 +19,7 @@ thumb_image: /images/classic/post-4.png
 image: /images/classic/post-4.png
 image_position: right
 template: post
+cmseditable: true
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Teneo, inquit, finem illi videri nihil dolere. Quid est enim aliud esse versutum. Age, inquies, ista parva sunt. Verum hoc idem saepe faciamus. Atque ab his initiis profecti omnium virtutum et originem et progressionem persecuti sunt. Duo Reges: constructio interrete. Itaque eos id agere, ut a se dolores, morbos, debilitates repellant. Estne, quaeso, inquam, sitienti in bibendo voluptas? Iam in altera philosophiae parte. Quem Tiberina descensio festo illo die tanto gaudio affecit, quanto L.
