@@ -45,7 +45,9 @@ If you want to allow visitors to edit the website's docs and blogs posts, you wi
 
 ## Missing features
 
-The SectionDocs component could not be included due to some weird errors. The component is still there but it's not working and won't show up in the Stackbit Studio's visual editor.
+* The SectionDocs component could not be included due to some weird errors. The component is still there but it's not working and won't show up in the Stackbit Studio's visual editor.
+
+* In the Docs section, only one level of nesting will be appropriately displayed, any deeper levels will be displayed with indent but not below their proper parent... You can play with frontmatter.weight meanwhile to give the illusion of proper nesting.
 
 ## License
 
