@@ -26,7 +26,7 @@ export default class Post extends React.Component {
         if (_.get(this.props, 'pageContext.frontmatter.image', null)) {
              has_image = true;
         }
-        let netlifycms_url = window.location.protocol + "/admin/#/edit/" + _.trim(_.get(this.props, 'pageContext.relativePath', null), '/');  // build path to edit this page with NetlifyCMS, cannot use Gatsby's Link component since NetlifyCMS is not present at build time but only after building static so Link fails, need to use >a> and hence build an absolute path
+        let netlifycms_url = "/admin/#/edit/" + _.trim(_.get(this.props, 'pageContext.relativePath', null), '/');  // build path to edit this page with NetlifyCMS, cannot use Gatsby's Link component since NetlifyCMS is not present at build time but only after building static so Link fails, need to use <a> instead
         netlifycms_url = netlifycms_url.substring(0, netlifycms_url.lastIndexOf('.'));  // remove the file extension if present
         return (
             <Layout {...this.props}>
