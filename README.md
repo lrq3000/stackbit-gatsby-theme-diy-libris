@@ -27,7 +27,9 @@ Then launch a git commandline, clone this repository somewhere, cd inside, and t
 
 This will install gatsby, install the necessary plugins and build the gatsby website (and search index), and then launch a local development server (default port: 8000, hence open the address http://localhost:8000 to access the website locally once gatsby is running).
 
-Note that both visual editors (Stackbit Studio and NetlifyCMS) only work when the website is deployed. Locally it's only possible to edit the raw files (but with instant feedback thanks to `gatsby develop`), although there is a [Beta feature on NetlifyCMS to allow for local git editing](https://www.netlifycms.org/docs/beta-features/#working-with-a-local-git-repository). All content and pages are in markdown format. Tools such as [MarkText](https://marktext.app/) may by useful to write drafts.
+Note that both visual editors (Stackbit Studio and NetlifyCMS) only work when the website is deployed. Locally it's only possible to edit the raw files (but with instant feedback thanks to `gatsby develop`), although there is a [Beta feature on NetlifyCMS to allow for local git editing](https://www.netlifycms.org/docs/beta-features/#working-with-a-local-git-repository). If you try to access `/admin/`, NetlifyCMS will launch but all the pages shown will reflect the online git repository, not the local one, beware not to be bitten by this.
+
+All content and pages are in markdown format and hence can be edited by any raw text editor. Tools such as [MarkText](https://marktext.app/) may by useful to write drafts.
 
 If you wish to edit the website both locally and through Stackbit (i.e., other editors use Stackbit Studio visual editor and you edit the raw files locally), do not forget to work on the `preview` branch (`git checkout preview`) and push your changes there first (`git push origin preview`) so that they get reflected in Stackbit Studio. You can then `git checkout master; git merge preview; git push origin master; git checkout preview` to push the same updates to master and then get back to the `preview` branch.
 
