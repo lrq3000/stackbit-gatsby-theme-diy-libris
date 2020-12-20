@@ -21,10 +21,11 @@ public_folder: /images/uploads  # url to media files when deployed
 collections:
   - name: blog  # used in routes, e.g., /admin/collections/blog
     label: Blog  # used in the UI
-    folder: pages/blog  # relative url where the editable documents are stored
+    folder: src/pages/blog  # relative url where the editable documents are stored
     create: true  # allow users to create new documents in this collection
     slug: "{{title}}"  # filename template, the adequate file extension (e.g., .md) will be automatically added
     extension: md
+    media_folder: '{{media_folder}}/blog/'
     fields:  # fields for each document, usually in front matter, default type is string
       - { name: path, label: Path }
       - { name: date, label: Date, widget: datetime }
@@ -32,12 +33,21 @@ collections:
       - { name: body, label: Body, widget: markdown }
   - name: docs
     label: Docs
-    folder: pages/docs
+    folder: src/pages/docs
     create: true
+    #path: '/'  # allows to walk inside folders, see https://www.netlifycms.org/docs/beta-features/#folder-collections-path and https://github.com/netlify/netlify-cms/issues/513 and nested collections which allow for recursive subfolders walking without requiring a specific path template: https://www.netlifycms.org/docs/beta-features/#nested-collections
     slug: "{{title}}"
-    extension: md
+    #extension: md
+    media_folder: '{{media_folder}}/docs/'
+    # adding a nested object will show the collection folder structure, see https://www.netlifycms.org/docs/beta-features/#nested-collections and https://github.com/netlify/netlify-cms/issues/4741#issuecomment-748627801
+    nested:
+      depth: 100 # max depth to show in the collection tree
+      #summary: '{{title}}' # optional summary for a tree node, defaults to the inferred title field
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: datetime }
-      - { name: title, label: Title }
+      - { name: title, label: Title, widget: string }
+      - { name: template, label: Template, widget: hidden, default: "docs" }
+      - { name: excerpt, label: Excerpt, widget: string }
       - { name: body, label: Body, widget: markdown }
+    # adding a meta object with a path property allows editing the path of entries
+    # moving an existing entry will move the entire sub tree of the entry to the new location
+    meta: { path: { widget: string, label: 'Path', index_file: 'index' } }
