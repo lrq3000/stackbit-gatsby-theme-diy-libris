@@ -31,9 +31,10 @@ collections:
       - { name: template, label: Template, widget: hidden, default: "post" }
       - { name: subtitle, label: Subtitle, widget: string }
       - { name: excerpt, label: Excerpt, widget: string }
-      - { name: image, label: "Cover Image", widget: image }
       - { name: date, label: Date, widget: datetime }
-      - { name: thumb_image, label: "Thumbnail image", widget: image, default: "{{image}}" }
+      - { name: image, label: "Cover Image", widget: image, allow_multiple: false }
+      - { name: thumb_image, label: "Thumbnail image", widget: image, default: "{{image}}", allow_multiple: false }  # can't copy another field (eg, image) yet: https://community.netlify.com/t/is-it-possible-to-set-a-dynamic-default-value-for-a-field/20079/3
+      - { name: image_position, label: "Image position", widget: select, options: ["left", "top", "right"], default: "right" }
       - { name: body, label: Body, widget: markdown }
   - name: docs
     label: Docs
