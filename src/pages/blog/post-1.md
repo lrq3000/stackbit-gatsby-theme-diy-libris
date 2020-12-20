@@ -1,20 +1,18 @@
 ---
-title: Utrum Igitur Tibi Litteram Videor An Totas Paginas
-subtitle: >-
-  Atqui pugnantibus et contrariis studiis consiliisque semper utens nihil quieti
-  videre, nihil tranquilli potest.
-date: '2020-04-16'
+excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ea mala
+  virtuti magnitudine obruebantur. Duo Reges: constructio interrete."
 author: src/data/team/dianne-ameter.yaml
+image_position: right
+title: Utrum Igitur Tibi Litteram Videor An Totas Paginas
+template: post
+subtitle: Atqui pugnantibus et contrariis studiis consiliisque semper utens
+  nihil quieti videre, nihil tranquilli potest.
+image: /blog/post-3.png
+date: 2020-04-16
+thumb_image: /images/classic/post-1.png
 categories:
   - src/data/categories/tutorials.yaml
   - src/data/categories/general.yaml
-excerpt: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ea mala virtuti
-  magnitudine obruebantur. Duo Reges: constructio interrete.
-thumb_image: /images/classic/post-1.png
-image: /images/classic/post-1.png
-image_position: right
-template: post
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ea mala virtuti magnitudine obruebantur. Duo Reges: constructio interrete. An hoc usque quaque, aliter in vita? Gracchum patrem non beatiorem fuisse quam fillum, cum alter stabilire rem publicam studuerit, alter evertere. Quo plebiscito decreta a senatu est consuli quaestio Cn. Illud non continuo, ut aeque incontentae. Atqui pugnantibus et contrariis studiis consiliisque semper utens nihil quieti videre, nihil tranquilli potest. Itaque hoc frequenter dici solet a vobis, non intellegere nos, quam dicat Epicurus voluptatem. Sin kakan malitiam dixisses, ad aliud nos unum certum vitium consuetudo Latina traduceret.
