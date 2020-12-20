@@ -24,6 +24,8 @@ export default class Docs extends React.Component {
     render() {
         let root_docs_path = _.trim(_.get(this.props, 'pageContext.site.data.doc_sections.root_docs_path', null), '/');
         let current_page_url = _.trim(_.get(this.props, 'pageContext.url', null), '/');
+        let netlifycms_url = window.location.protocol + "/admin/#/edit/" + _.trim(_.get(this.props, 'pageContext.relativePath', null), '/');  // build path to edit this page with NetlifyCMS, cannot use Gatsby's Link component since NetlifyCMS is not present at build time but only after building static so Link fails, need to use >a> and hence build an absolute path
+        netlifycms_url = netlifycms_url.substring(0, netlifycms_url.lastIndexOf('.'));  // remove the file extension if present
         return (
             <Layout {...this.props}>
                 {
@@ -54,6 +56,9 @@ export default class Docs extends React.Component {
                           </React.Fragment>);
                       })())}
                     </div>
+                  </div>
+                  <div class="center-content">
+                    <a href={netlifycms_url} class="button">Edit this page</a>
                   </div>
                 </article>
                 <nav id="page-nav" className="page-nav">

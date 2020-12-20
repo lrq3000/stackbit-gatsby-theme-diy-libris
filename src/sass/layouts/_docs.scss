@@ -21,7 +21,6 @@ $palette: (
 
 html {
   font-family: _font(primary);
-  font-size: 100%;
 }
 
 body {
@@ -31,19 +30,6 @@ body {
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-}
-
-a {
-  border-bottom: 1px solid currentColor;
-  color: map-get($palette, accent);
-  text-decoration: none;
-  -webkit-transition: .3s ease;
-  transition: .3s ease;
-
-  &:hover,
-  &:focus {
-    color: map-get($palette, primary);
-  }
 }
 
 h1,
@@ -298,107 +284,7 @@ textarea {
   margin-top: 1.66667em;
 }
 
-/* Buttons */
-button,
-input[type="submit"],
-input[type="button"],
-input[type="reset"],
-.button {
-  background-color: map-get($palette, accent);
-  border: 2px solid map-get($palette, accent);
-  border-radius: 1.75em;
-  box-sizing: border-box;
-  color: #fff;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 0.035em;
-  line-height: 1.2;
-  padding: 0.8em 2.75em;
-  text-align: center;
-  text-decoration: none;
-  -webkit-transition: .3s ease;
-  transition: .3s ease;
-  vertical-align: middle;
-
-  &:hover,
-  &:focus,
-  &:active {
-    background-color: transparent;
-    color: map-get($palette, accent);
-    outline: 0;
-  }
-}
-
-.button-secondary {
-  background-color: transparent;
-  color: map-get($palette, accent);
-
-  &:hover,
-  &:focus,
-  &:active {
-    background-color: map-get($palette, accent);
-    color: #fff;
-  }
-}
-
-.button-icon {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background: 0;
-  border: 0;
-  color: inherit;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-size: 1em;
-  font-weight: normal;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  letter-spacing: normal;
-  padding: 0.25em 0;
-
-  .icon {
-    height: 1em;
-    min-width: 1em;
-    text-align: center;
-  }
-
-  &:hover,
-  &:focus,
-  &:active {
-    color: map-get($palette, accent);
-  }
-}
-
-.has-gradient {
-  .button {
-    background-color: #fff;
-    border-color: #fff;
-    color: map-get($palette, accent);
-
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: transparent;
-      color: #fff;
-    }
-  }
-
-  .button-secondary {
-    background-color: transparent;
-    color: #fff;
-
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: #fff;
-      color: map-get($palette, accent);
-    }
-  }
-}
+/* Menu button */
 
 #menu-open,
 #menu-close,
@@ -896,12 +782,17 @@ img {
     color: map-get($palette, primary);
     border: 0;
     display: block;
+    text-decoration: none;
 
     &:hover,
     &:focus {
       color: map-get($palette, accent);
     }
   }
+}
+
+.docs-nav-menu a {
+  text-decoration: none;
 }
 
 .page-nav-inside {

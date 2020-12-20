@@ -34,7 +34,7 @@ If you wish to edit the website both locally and through Stackbit (i.e., other e
 ### Deployment online
 You can create a site on Stackbit and import this repository to kickstart your own showcase+documentation website.
 
-If you want to allow visitors to edit the website's docs and blogs posts, you will need to host your website on GitHub, although there are alternative ways through Identity and Git-Gateway (see [here](https://www.netlifycms.org/docs/open-authoring/) for the details about open_authoring and [here to enable Netlify Identity and Git-Gateway](https://docs.netlify.com/visitor-access/git-gateway/#setup-and-settings)).
+If you want to allow visitors to edit the website's docs and blogs posts, you will need to host your website on GitHub, although there are alternative ways through Identity and Git-Gateway (see [here](https://www.netlifycms.org/docs/open-authoring/) for the details about open_authoring and [here to enable Netlify Identity and Git-Gateway](https://docs.netlify.com/visitor-access/git-gateway/#setup-and-settings)). You also need to edit `/static/admin/config.yml` to update the `repo` field to point to your github repository's address.
 
 ## Additional features
 * Automatic code syntax highlighting in MDX files using [gatsby-remark-highlight-code](https://www.gatsbyjs.com/plugins/gatsby-remark-highlight-code/) (Prism was disabled by default, and it required specifying the language).

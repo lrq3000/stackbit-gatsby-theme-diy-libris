@@ -26,6 +26,8 @@ export default class Post extends React.Component {
         if (_.get(this.props, 'pageContext.frontmatter.image', null)) {
              has_image = true;
         }
+        let netlifycms_url = window.location.protocol + "/admin/#/edit/" + _.trim(_.get(this.props, 'pageContext.relativePath', null), '/');  // build path to edit this page with NetlifyCMS, cannot use Gatsby's Link component since NetlifyCMS is not present at build time but only after building static so Link fails, need to use >a> and hence build an absolute path
+        netlifycms_url = netlifycms_url.substring(0, netlifycms_url.lastIndexOf('.'));  // remove the file extension if present
         return (
             <Layout {...this.props}>
             <article className="post py-5 py-sm-6 py-md-7">
@@ -63,6 +65,12 @@ export default class Post extends React.Component {
             			<BlogPostTags {...this.props} tags={_.get(this.props, 'pageContext.frontmatter.tags', null)} />
             		</footer>
             		)}
+                    <hr />
+                    <div class="center-content">
+                        <span>Got an idea to communicate? Want to share your story?</span>
+                        <br />
+                        <a href={netlifycms_url} class="button">Create your own post here!</a>
+                    </div>
             	</div>
             </article>
             </Layout>

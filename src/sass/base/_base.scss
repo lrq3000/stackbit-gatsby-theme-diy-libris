@@ -30,9 +30,13 @@ a {
 	color: inherit;
 	text-decoration: underline;
 
-	&:hover {
-		text-decoration: none;
-	}
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+
+    &:hover,
+    &:focus {
+        color: $color-btn-bg;
+    }
 }
 
 h1,
