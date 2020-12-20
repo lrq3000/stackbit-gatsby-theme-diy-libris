@@ -70,5 +70,6 @@ module.exports = {
             },
           },
         },
+        `gatsby-plugin-netlify-cms`, // comment this out if you don't want to use NetlifyCMS to offer a visual editor for the blog and docs content (Stackbit Studio will still be able to edit the whole website)
     ]
 };

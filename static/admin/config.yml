@@ -1,0 +1,17 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: static/images/uploads  # where media files such as images will be stored
+public_folder: /images/uploads  # url to media files when deployed
+
+collections:
+  - name: blog  # used in routes, e.g., /admin/collections/blog
+    label: Blog  # used in the UI
+    folder: blog  # relative url where the editable documents are stored
+    create: true  # allow users to create new documents in this collection
+    fields:  # fields for each document, usually in front matter, default type is string
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: datetime }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
