@@ -29,6 +29,8 @@ This will install gatsby, install the necessary plugins and build the gatsby web
 
 Note that both visual editors (Stackbit Studio and NetlifyCMS) only work when the website is deployed. Locally it's only possible to edit the raw files (but with instant feedback thanks to `gatsby develop`). All content and pages are in markdown format. Tools such as [MarkText](https://marktext.app/) may by useful to write drafts.
 
+If you wish to edit the website both locally and through Stackbit (i.e., other editors use Stackbit Studio visual editor and you edit the raw files locally), do not forget to work on the `preview` branch (`git checkout preview`) and push your changes there first (`git push origin preview`) so that they get reflected in Stackbit Studio. You can then `git checkout master; git merge preview; git push origin master; git checkout preview` to push the same updates to master and then get back to the `preview` branch.
+
 ### Deployment online
 You can create a site on Stackbit and import this repository to kickstart your own showcase+documentation website.
 
