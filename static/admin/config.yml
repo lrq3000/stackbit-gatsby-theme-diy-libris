@@ -21,7 +21,7 @@ public_folder: /images/uploads  # url to media files when deployed
 collections:
   - name: blog  # used in routes, e.g., /admin/collections/blog
     label: Blog  # used in the UI
-    folder: blog  # relative url where the editable documents are stored
+    folder: pages/blog  # relative url where the editable documents are stored
     create: true  # allow users to create new documents in this collection
     slug: "{{title}}"  # filename template, the adequate file extension (e.g., .md) will be automatically added
     extension: md
@@ -32,7 +32,7 @@ collections:
       - { name: body, label: Body, widget: markdown }
   - name: docs
     label: Docs
-    folder: docs
+    folder: pages/docs
     create: true
     slug: "{{title}}"
     extension: md
