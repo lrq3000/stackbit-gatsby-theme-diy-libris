@@ -49,6 +49,8 @@ If you want to allow visitors to edit the website's docs and blogs posts, you wi
 
 * In the Docs section, only one level of nesting will be appropriately displayed, any deeper levels will be displayed with indent but not below their proper parent... You can play with frontmatter.weight meanwhile to give the illusion of proper nesting.
 
+* because `gatsby-plugin-netlify-cms` uses an outdated version of NetlifyCMS without the `parent` widget type necessary for nested collections, we forcefully overwrite by copying from a custom `static/admin/index.html` in `netlify.toml` to `public/admin/index.html`. In the future, this line should be removed to use the local js files instead of outsourcing from unpkg.com .
+
 ## License
 
 All rights belong to Stackbit, this theme should be considered as under the same license as their DIY and Libris themes.
