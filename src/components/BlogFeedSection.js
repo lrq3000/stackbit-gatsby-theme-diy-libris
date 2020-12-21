@@ -49,6 +49,7 @@ export default class BlogFeedSection extends React.Component {
             		)}
             	</div>
             	)}
+                <span>{JSON.stringify(posts_sorted)}</span>
             	<div className="container">
             		<div className="grid">
             			{_.map(posts_sorted, (post, post_idx) => {
@@ -57,6 +58,7 @@ export default class BlogFeedSection extends React.Component {
             			         is_post = true;
             			    }
             			    return (<React.Fragment key={post_idx + '.1'}>
+                                <span>{is_post ? 'true' : 'false'}</span>
                 				{(is_post && ((show_recent === false) || (post_count < recent_count))) && ((() => {
                 				     post_count = post_count + 1;
                 				    return (

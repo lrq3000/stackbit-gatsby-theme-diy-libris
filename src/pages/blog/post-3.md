@@ -6,7 +6,7 @@ subtitle: >-
 date: '2020-05-28'
 author: src/data/people/gustav-purpleson.yaml
 categories:
-  - src/data/categories/general.yaml
+  - general
 tags:
   - src/data/tags/stackbit.yaml
   - src/data/tags/jamstack.yaml

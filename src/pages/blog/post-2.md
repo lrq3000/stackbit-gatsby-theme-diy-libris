@@ -6,8 +6,8 @@ subtitle: >-
 date: '2020-05-25'
 author: src/data/people/hilary-ouse.yaml
 categories:
-  - src/data/categories/news.yaml
-  - src/data/categories/general.yaml
+  - news
+  - general
 tags:
   - src/data/tags/jamstack.yaml
   - src/data/tags/netlify.yaml

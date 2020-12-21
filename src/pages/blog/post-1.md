@@ -6,8 +6,8 @@ subtitle: >-
 date: '2020-04-16'
 author: src/data/people/dianne-ameter.yaml
 categories:
-  - src/data/categories/tutorials.yaml
-  - src/data/categories/general.yaml
+  - tutorials
+  - general
 excerpt: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ea mala virtuti
   magnitudine obruebantur. Duo Reges: constructio interrete.

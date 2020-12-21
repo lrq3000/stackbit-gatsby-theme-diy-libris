@@ -6,7 +6,7 @@ subtitle: >-
 date: '2020-06-02'
 author: src/data/people/gustav-purpleson.yaml
 categories:
-  - src/data/categories/tutorials.yaml
+  - tutorials
 tags:
   - src/data/tags/stackbit.yaml
   - src/data/tags/netlify.yaml

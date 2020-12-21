@@ -6,8 +6,8 @@ subtitle: >-
 date: '2020-05-30'
 author: src/data/people/dianne-ameter.yaml
 categories:
-  - src/data/categories/tutorials.yaml
-  - src/data/categories/news.yaml
+  - tutorials
+  - news
 tags:
   - src/data/tags/jamstack.yaml
   - src/data/tags/sourcebit.yaml
