@@ -28,7 +28,7 @@ collections:
     #extension: md
     media_folder: '{{media_folder}}/docs'
     # adding a nested object will show the collection folder structure, see https://www.netlifycms.org/docs/beta-features/#nested-collections and https://github.com/netlify/netlify-cms/issues/4741#issuecomment-748627801
-    summary: "{{title}} (last modified {{commit_date}})"
+    summary: "{{title}} (last modified {{commit_date}})"  # text displayed as the name of each entry in the UI listing
     nested:
       depth: 100 # max depth to show in the collection tree
       #summary: '{{title}}' # optional summary for a tree node, defaults to the inferred title field
@@ -70,9 +70,9 @@ collections:
     slug: "{{id}}"
     extension: yaml
     media_folder: '{{media_folder}}/blog'
+    summary: "{{first_name}} {{last_name}} ({{id}})"
     fields:
       - { name: id, label: Identifier, widget: string }
-      - { name: title, label: Title, widget: string }
       - { name: first_name, label: "First name", widget: string }
       - { name: last_name, label: "Last name", widget: string }
       - { name: photo, label: Photo, widget: image, required: false }
