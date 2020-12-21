@@ -151,7 +151,8 @@
 }
 
 .style-minimal,
-.style-classic {
+.style-classic,
+.style-classicmodern {
 	@include media-breakpoint-up(md) {
 		.navbar__menu {
 			a:not(.btn) {

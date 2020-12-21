@@ -2,7 +2,7 @@
  * Light/dark mode
  */
 .mode-light {
-	&.style-classic {
+	&.style-classic, &.style-classicmodern {
 		.card--highlight {
 			box-shadow: none;
 	
@@ -103,6 +103,7 @@
 	}
 
 	&.style-classic,
+    &.style-classicmodern,
 	&.style-bold {
 		.bg-secondary {
 			pre {
@@ -173,7 +174,8 @@
 		}
 	}
 
-	&.style-bold {
+	&.style-bold,
+    &.style-classicmodern {
 		.card {
 			pre {
 				background-color: $color-bold-code-bg;
@@ -233,7 +235,8 @@
 		border-color: $color-dark-code-border;
 	}
 
-	&.style-classic {
+	&.style-classic,
+    &.style-classicmodern {
 		pre {
 			background-color: $color-dark-code-bg;
 		}
@@ -258,7 +261,8 @@
 		border-color: $color-dark-table-border;
 	}
 
-	&.style-classic {
+	&.style-classic,
+    &.style-classicmodern {
 		th {
 			background-color: $color-dark-table-bg;
 		}
@@ -401,7 +405,8 @@
 		}
 	}
 
-	&.style-classic {
+	&.style-classic,
+    &.style-classicmodern {
 		.card {
 			pre {
 				background-color: $color-dark-code-bg;

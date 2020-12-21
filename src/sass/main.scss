@@ -29,6 +29,7 @@
 @import "components/containers";
 @import "components/banner";
 @import "components/text-block";
+@import "components/search";
 
 // Layouts
 @import "layouts/site";
@@ -42,12 +43,6 @@
 
 // Color variations
 @import "variations/modes";
-
-// Font.
-$font: (
-  primary: ("Lato", Helvetica, Arial, sans-serif),
-  monospace: (Monaco, courier, monospace)
-);
 
 @import "../../static/assets/css/fontawesome.min.css";
 @import "../../static/assets/css/brands.min.css";

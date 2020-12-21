@@ -124,6 +124,13 @@ pre {
 	}
 }
 
+.style-classicmodern {
+	pre {
+		background-color: $color-code-bg;
+		border-radius: 6px;
+	}
+}
+
 .style-bold {
 	pre {
 		background-color: $color-bold-code-bg;
@@ -194,6 +201,14 @@ img {
 }
 
 .style-classic {
+	.site-content {
+		img {
+			border-radius: 6px;
+		}
+	}
+}
+
+.style-classicmodern {
 	.site-content {
 		img {
 			border-radius: 6px;

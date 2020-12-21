@@ -127,7 +127,7 @@
 	}
 }
 
-.style-classic {
+.style-classic, .style-classicmodern {
 	.section__title {
 		&:after {
 			background-color: $color-classic-sect-underline;
@@ -189,7 +189,7 @@
 	}
 }
 
-.style-classic {
+.style-classic, .style-classicmodern {
 	$classic-colors: map-deep-get($theme-styles, "classic", "colors");
 	@each $color, $value in $classic-colors {
 		$color-suffix: "#{$color}";

@@ -1,7 +1,7 @@
 {
     "description": "A \"do it yourself\" theme for Stackbit",
     "layout": "boxed",
-    "style": "classic",
+    "style": "classicmodern",
     "palette": "blue",
     "palettes": {
         "blue": {

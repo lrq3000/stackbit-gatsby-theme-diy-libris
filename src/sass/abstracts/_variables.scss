@@ -34,7 +34,20 @@ $theme-styles: (
 			green:  #00cc88,
 			red:    #ff3366
 		)
-	)
+	),
+    classicmodern: (
+        fonts: (
+          primary: ("Lato", Helvetica, Arial, sans-serif),
+          monospace: (Monaco, courier, monospace),
+          serif: ('Lora', 'Lucida Bright', 'Lucidabright', 'Lucida Serif', Lucida, Georgia, serif),
+	      sans-serif: ('Open Sans', Lato, sans-serif)
+        ),
+		colors: (
+			blue:  #7076f0,
+			green: #29cf7f,
+			red:   #f36763
+		)
+    )
 );
 
 // Monospace font
