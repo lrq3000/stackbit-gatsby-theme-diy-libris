@@ -10,18 +10,24 @@ export default class Search extends React.Component {
 
   render() {
     return (
-      <div className={this.props.classNames}>
+      <div className={this.props.classNames+" search__parent__div flex-md"}>
         <input className='search__input' type='text' value={this.state.query} onChange={this.search} placeholder={'Search'} aria-label="Search" />
-        <ul className='search__list'>
-          {this.state.results.map((page) => (
-          <li key={page.url}>
-            <Link className='search__list_white search__list_non-decoration'
-              to={page.url}>
-              {page.title}
-            </Link>
-          </li>
-          ))}
-        </ul>
+        { // Results list
+        (this.state.results.length > 0) && ( // Only show when there are results
+        <div className='search__list'>
+            <span>Search results</span>
+            <ul>
+              {this.state.results.map((page) => (
+              <li key={page.url}>
+                <Link className='search__list_white search__list_non-decoration'
+                  to={page.url}>
+                  {page.title}
+                </Link>
+              </li>
+              ))}
+            </ul>
+        </div>
+        ) }
       </div>
     )
   }

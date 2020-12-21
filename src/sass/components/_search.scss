@@ -1,0 +1,53 @@
+/**
+ * Search box
+ */
+
+.search__parent__div {
+    // Center the search box
+    margin: auto;
+    text-align: center;
+    vertical-align: center;
+    padding: 0;
+    // Don't make it too wide
+    min-width: 150px;
+    width: 30%;
+    position: relative;
+}
+
+.search__input {
+    display: inline-block;
+    width: 100% !important;
+    margin: 0;
+    border-radius: 25px !important;
+    transition: .5s ease;  // smooth animations. By defining it here, it will apply to both hovering and dehovering.
+    &:hover,
+    &:active,
+    &:focus {
+        border-color: black !important;
+    }
+}
+
+.search__list {
+    position: absolute;
+    display: inline-block;
+    z-index: 999;
+    background: white;
+    top: 100%; // place below parent
+    border: 1px lightgrey solid !important;
+    width: 100%;
+    
+    & ul {
+    text-align: left;
+        & a {
+            text-decoration: none;
+
+            /*
+            &:hover,
+            &:focus,
+            &:active {
+                text-decoration: underline;
+            }
+            */
+        }
+    }
+}
