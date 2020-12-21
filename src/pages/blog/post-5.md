@@ -1,28 +1,22 @@
 ---
 title: Amet Nulla Facilisi Morbi Tempus
-subtitle: >-
-  Sit amet consectetur adipiscing elit pellentesque habitant morbi tristique
-  senectus.
-date: '2020-06-02'
-author: src/data/authors/gustav-purpleson.yaml
+template: post
+subtitle: Sit amet consectetur adipiscing elit pellentesque habitant morbi
+  tristique senectus.
+excerpt: Estne, quaeso, inquam, sitienti in bibendo voluptas? Iam in altera
+  philosophiae parte. Quem Tiberina descensio festo illo die tanto gaudio
+  affecit, quanto.
+date: 2020-06-02
+image: /images/classic/post-5.png
+thumb_image: /images/classic/post-5.png
+image_position: right
+author: src/data/people/gustav-purpleson.yaml
 categories:
   - src/data/categories/tutorials.yaml
+  - src/data/categories/general.yaml
 tags:
   - src/data/tags/stackbit.yaml
   - src/data/tags/netlify.yaml
-excerpt: >-
-  Estne, quaeso, inquam, sitienti in bibendo voluptas? Iam in altera
-  philosophiae parte. Quem Tiberina descensio festo illo die tanto gaudio
-  affecit, quanto.
-thumb_image: /images/classic/post-5.png
-image: /images/classic/post-5.png
-image_position: right
-related_posts:
-  - src/pages/blog/post-4.md
-  - src/pages/blog/post-6.md
-  - src/pages/blog/post-2.md
-show_author_bio: true
-template: post
 cmseditable: true
 ---
 
