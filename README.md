@@ -52,6 +52,7 @@ If you want to allow visitors to edit the website's docs and blogs posts, you wi
 * because `gatsby-plugin-netlify-cms` uses an outdated version of NetlifyCMS without the `parent` widget type necessary for nested collections, we forcefully overwrite by copying from a custom `static/admin/index.html` in `netlify.toml` to `public/admin/index.html`. In the future, this line should be removed to use the local js files instead of outsourcing from unpkg.com .
 
 * blog posts' categories and tags should be generated using a template instead of one md file for each that needs to be manually created. They should even be automatically generated from blog posts directly, without requiring a `data` yaml file definition.
+    * For the time being, newly created tags, categories and authors through NetlifyCMS have no link to a dedicated listing/bio page, but they can be manually created by raw files editing or via the Stackbit Studio's visual editor.
 
 ## License
 

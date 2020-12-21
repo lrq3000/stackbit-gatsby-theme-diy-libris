@@ -19,25 +19,6 @@ public_folder: /images/uploads  # url to media files when deployed
 # locale: 'en'  # UI language
 
 collections:
-  - name: blog  # used in routes, e.g., /admin/collections/blog
-    label: Blog  # used in the UI
-    folder: src/pages/blog  # relative url where the editable documents are stored
-    create: true  # allow users to create new documents in this collection
-    slug: "{{title}}"  # filename template, the adequate file extension (e.g., .md) will be automatically added
-    extension: md
-    media_folder: '{{media_folder}}/blog'
-    filter: {field: "cmseditable", value: true}  # filter out blog/index.md, the homepage of blog posts, we don't want people to edit that
-    fields:  # fields for each document, usually in front matter, default type is string
-      - { name: title, label: Title, widget: string }
-      - { name: template, label: Template, widget: hidden, default: "post" }
-      - { name: subtitle, label: Subtitle, widget: string }
-      - { name: excerpt, label: Excerpt, widget: string }
-      - { name: date, label: Date, widget: datetime }
-      - { name: image, label: "Cover Image", widget: image, allow_multiple: false, hint: "Cover image that will display at the top of the post." }
-      - { name: thumb_image, label: "Thumbnail image", widget: image, default: "{{image}}", allow_multiple: false, hint: "Thumbnail image for the post in listings, should be the same as the cover image." }  # can't copy another field (eg, image) yet: https://community.netlify.com/t/is-it-possible-to-set-a-dynamic-default-value-for-a-field/20079/3
-      - { name: image_position, label: "Image position", widget: select, options: ["left", "top", "right"], default: "right" }
-      - { name: cmseditable, label: cmseditable, widget: hidden, default: true }
-      - { name: body, label: Body, widget: markdown }
   - name: docs
     label: Docs
     folder: src/pages/docs
@@ -58,6 +39,41 @@ collections:
     # adding a meta object with a path property allows editing the path of entries
     # moving an existing entry will move the entire sub tree of the entry to the new location
     meta: { path: { widget: parent, label: 'Parent', index_file: 'index' } }  # use a widget type parent to get a dropdown selector for the path instead of a string https://github.com/netlify-labs/netlify-cms-widget-parent/blob/main/example/config.yml
+  - name: blog  # used in routes, e.g., /admin/collections/blog
+    label: Blog  # used in the UI
+    folder: src/pages/blog  # relative url where the editable documents are stored
+    create: true  # allow users to create new documents in this collection
+    slug: "{{title}}"  # filename template, the adequate file extension (e.g., .md) will be automatically added
+    extension: md
+    media_folder: '{{media_folder}}/blog'
+    filter: {field: "cmseditable", value: true}  # filter out blog/index.md, the homepage of blog posts, we don't want people to edit that
+    fields:  # fields for each document, usually in front matter, default type is string
+      - { name: title, label: Title, widget: string }
+      - { name: template, label: Template, widget: hidden, default: "post" }
+      - { name: subtitle, label: Subtitle, widget: string, required: false }
+      - { name: excerpt, label: Excerpt, widget: string, required: false }
+      - { name: date, label: Date, widget: datetime }
+      - { name: image, label: "Cover Image", widget: image, allow_multiple: false, required: false, hint: "Cover image that will display at the top of the post." }
+      - { name: thumb_image, label: "Thumbnail image", widget: image, default: "{{image}}", allow_multiple: false, required: false, hint: "Thumbnail image for the post in listings, should be the same as the cover image." }  # can't copy another field (eg, image) yet: https://community.netlify.com/t/is-it-possible-to-set-a-dynamic-default-value-for-a-field/20079/3
+      - { name: image_position, label: "Image position", widget: select, options: ["left", "top", "right"], default: "right" }
+      - { name: author, label: Author, widget: relation, collection: blog-authors, value_field: id, search_fields: ['id', 'first_name', 'last_name'], display_fields: ['first_name', 'last_name'], multiple: false, required: false }
+      - { name: categories, label: Categories, widget: relation, collection: blog-categories, value_field: id, search_fields: ['id', 'title'], display_fields: ['title'], multiple: true, required: false }
+      - { name: tags, label: Tags, widget: relation, collection: blog-tags, value_field: id, search_fields: ['id', 'title'], display_fields: ['title'], multiple: true, required: false }
+      - { name: cmseditable, label: cmseditable, widget: hidden, default: true }
+      - { name: body, label: Body, widget: markdown }
+  - name: blog-authors
+    label: BlogAuthors
+    folder: src/data/authors
+    create: true
+    slug: "{{id}}"
+    extension: yaml
+    media_folder: '{{media_folder}}/blog'
+    fields:
+      - { name: id, label: Identifier, widget: string }
+      - { name: title, label: Title, widget: string }
+      - { name: first_name, label: "First name", widget: string }
+      - { name: last_name, label: "Last name", widget: string }
+      - { name: photo, label: Photo, widget: image, required: false }
   - name: blog-categories
     label: BlogCategories
     folder: src/data/categories
@@ -65,7 +81,17 @@ collections:
     slug: "{{id}}"
     extension: yaml
     media_folder: '{{media_folder}}/blog'
-    fields:  # fields for each document, usually in front matter, default type is string
+    fields:
       - { name: id, label: Identifier, widget: string }
       - { name: title, label: Title, widget: string }
-      - { name: link, label: Listing page URL, widget: string, default: "blog/category/<newcatid>", pattern: ["blog/category/.+", "URL needs to start with `blog/category/`"], hint: "This is the URL of the page that will list all pages for this category." }
+      #- { name: link, label: Listing page URL, widget: string, default: "blog/category/<newcatid>", pattern: ["blog/category/.+", "URL needs to start with `blog/category/`"], hint: "This is the URL of the page that will list all pages for this category." }  # disable to leave empty, there will be no link and no issue but no listing
+  - name: blog-tags
+    label: BlogTags
+    folder: src/data/tags
+    create: true
+    slug: "{{id}}"
+    extension: yaml
+    media_folder: '{{media_folder}}/blog'
+    fields:
+      - { name: id, label: Identifier, widget: string }
+      - { name: title, label: Title, widget: string }

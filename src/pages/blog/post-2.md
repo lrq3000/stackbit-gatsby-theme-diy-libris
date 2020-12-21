@@ -4,13 +4,13 @@ subtitle: >-
   Idemque diviserunt naturam hominis in animum et corpus. Si enim ad populum me
   vocas, eum.
 date: '2020-05-25'
-author: src/data/people/hilary-ouse.yaml
+author: hilary-ouse
 categories:
-  - src/data/categories/news.yaml
-  - src/data/categories/general.yaml
+  - news
+  - general
 tags:
-  - src/data/tags/jamstack.yaml
-  - src/data/tags/netlify.yaml
+  - jamstack
+  - netlify
 excerpt: >-
   Quae diligentissime contra Aristonem dicuntur a Chryippo. Videamus igitur
   sententias eorum, tum ad verba redeamus. Levatio igitur vitiorum magna.

@@ -1,15 +1,11 @@
 ---
-title: Amet Nulla Facilisi Morbi Tempus
+title: AHHHHHH
 subtitle: >-
   Sit amet consectetur adipiscing elit pellentesque habitant morbi tristique
   senectus.
-date: '2020-06-02'
-author: gustav-purpleson
+date: '2020-06-12'
 categories:
-  - tutorials
-tags:
-  - stackbit
-  - netlify
+  - newcat
 excerpt: >-
   Estne, quaeso, inquam, sitienti in bibendo voluptas? Iam in altera
   philosophiae parte. Quem Tiberina descensio festo illo die tanto gaudio
