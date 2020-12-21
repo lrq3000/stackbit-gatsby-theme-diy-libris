@@ -1,15 +1,12 @@
 ---
-title: AHHHHHH
+title: A random title
 subtitle: >-
-  Sit amet consectetur adipiscing elit pellentesque habitant morbi tristique
-  senectus.
+  Brace yourselves!
 date: '2020-06-12'
 categories:
-  - newcat
+  - src/data/categories/newcat.yaml
 excerpt: >-
-  Estne, quaeso, inquam, sitienti in bibendo voluptas? Iam in altera
-  philosophiae parte. Quem Tiberina descensio festo illo die tanto gaudio
-  affecit, quanto.
+  This post tests the display with a category without a link and no author nor tags.
 thumb_image: /images/classic/post-5.png
 image: /images/classic/post-5.png
 image_position: right

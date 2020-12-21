@@ -4,12 +4,12 @@ subtitle: >-
   Sit amet consectetur adipiscing elit pellentesque habitant morbi tristique
   senectus.
 date: '2020-06-02'
-author: gustav-purpleson
+author: src/data/authors/gustav-purpleson.yaml
 categories:
-  - tutorials
+  - src/data/categories/tutorials.yaml
 tags:
-  - stackbit
-  - netlify
+  - src/data/tags/stackbit.yaml
+  - src/data/tags/netlify.yaml
 excerpt: >-
   Estne, quaeso, inquam, sitienti in bibendo voluptas? Iam in altera
   philosophiae parte. Quem Tiberina descensio festo illo die tanto gaudio
