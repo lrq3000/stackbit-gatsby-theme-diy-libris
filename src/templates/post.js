@@ -26,8 +26,9 @@ export default class Post extends React.Component {
         if (_.get(this.props, 'pageContext.frontmatter.image', null)) {
              has_image = true;
         }
-        let netlifycms_url = "/admin/#/edit/" + _.trim(_.get(this.props, 'pageContext.relativePath', null), '/');  // build path to edit this page with NetlifyCMS, cannot use Gatsby's Link component since NetlifyCMS is not present at build time but only after building static so Link fails, need to use <a> instead
-        netlifycms_url = netlifycms_url.substring(0, netlifycms_url.lastIndexOf('.'));  // remove the file extension if present
+        let netlifycms_url = "/admin/#/collections/blog/new";  // create a new blog post instead of editing a pre-existent one
+        let netlifycms_url2 = "/admin/#/edit/" + _.trim(_.get(this.props, 'pageContext.relativePath', null), '/');  // build path to edit this page with NetlifyCMS, cannot use Gatsby's Link component since NetlifyCMS is not present at build time but only after building static so Link fails, need to use <a> instead
+        netlifycms_url2 = netlifycms_url2.substring(0, netlifycms_url2.lastIndexOf('.'));  // remove the file extension if present
         return (
             <Layout {...this.props}>
             <article className="post py-5 py-sm-6 py-md-7">
@@ -70,6 +71,8 @@ export default class Post extends React.Component {
                         <span>Got an idea to communicate? Want to share your story?</span>
                         <br />
                         <a href={netlifycms_url} class="button">Create your own post here!</a>
+                        <br />
+                        <a href={netlifycms_url2}>(or have a look at how this post was edited)</a>
                     </div>
             	</div>
             </article>
