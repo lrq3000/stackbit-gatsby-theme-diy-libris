@@ -20,6 +20,7 @@ image_position: right
 related_posts:
   - src/pages/blog/post-4.md
   - src/pages/blog/post-6.md
+  - src/pages/blog/post-2.md
 template: post
 cmseditable: true
 ---
