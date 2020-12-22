@@ -74,7 +74,7 @@ export default class Post extends React.Component {
                         </div>
 
                         {show_author_bio && author && (
-                            <BlogPostAuthorCard {...this.props} author={author} container_class={'post__footer_authorcard'} avatar_size={'big'} />
+                            <BlogPostAuthorCard {...this.props} author={author} container_class={'authorcard'} avatar_size={'big'} />
                         )}
             		</footer>
             		)}

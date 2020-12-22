@@ -13,27 +13,34 @@ export default class BlogPostAuthorCard extends React.Component {
         let author_data = getData(this.props.pageContext.site.data, author);
         return (
             <div className={container_class}>
-            	{author_data.link ? (
-            	<Link className="flex items-center" to={withPrefix(author_data.link)}>
-            		{author_data.photo && (
-            		<figure className={classNames('avatar', 'mr-1', {'avatar--small': avatar_size === 'small'}, {'avatar--big': avatar_size === 'big'})}>
-            			<img className="avatar__img" src={withPrefix(author_data.photo)} alt={author_data.first_name + (author_data.last_name ? (' ' + author_data.last_name) : '') + ' Photo'} />
-            		</figure>
-            		)}
-            		<span>{author_data.first_name} {author_data.last_name}</span>
-            	</Link>
-            	) : 
-            	<div className="flex items-center">
-            		{author_data.photo && (
-            		<figure className={classNames('avatar', 'mr-2', {'avatar--small': avatar_size === 'small'}, {'avatar--big': avatar_size === 'big'})}>
-            			<img className="avatar__img" src={withPrefix(author_data.photo)} alt={author_data.first_name + (author_data.last_name ? (' ' + author_data.last_name) : '') + ' Photo'} />
-            		</figure>
-            		)}
-            		<span>{author_data.first_name} {author_data.last_name}</span>
-            	</div>
-            	}
+                {author_data.photo && (
+                    <div className="authorcard_image">
+                        {author_data.link ? (
+                        <Link className="flex items-center" to={withPrefix(author_data.link)}>
+                            <figure className={classNames('avatar', 'mr-1', {'avatar--small': avatar_size === 'small'}, {'avatar--big': avatar_size === 'big'})}>
+                                <img className="avatar__img" src={withPrefix(author_data.photo)} alt={author_data.first_name + (author_data.last_name ? (' ' + author_data.last_name) : '') + ' Photo'} />
+                            </figure>
+                        </Link>
+                        ) : (
+                        <div className="flex items-center">
+                            <figure className={classNames('avatar', 'mr-2', {'avatar--small': avatar_size === 'small'}, {'avatar--big': avatar_size === 'big'})}>
+                                <img className="avatar__img" src={withPrefix(author_data.photo)} alt={author_data.first_name + (author_data.last_name ? (' ' + author_data.last_name) : '') + ' Photo'} />
+                            </figure>
+                        </div>
+                        )}
+                    </div>
+                )}
 
-                <MarkdownContent content={author_data.short_bio} />
+                <p className="authorcard_authorheader">Author:</p>
+                <p className="authorcard_name">
+                    {author_data.link ? (
+                        <Link to={withPrefix(author_data.link)}>{author_data.first_name} {author_data.last_name}</Link>
+                    ) : 
+                        <span>{author_data.first_name} {author_data.last_name}</span>
+                    }
+                </p>
+
+                <MarkdownContent className='authorcard_short_bio' content={author_data.short_bio} />
             </div>
         );
     }

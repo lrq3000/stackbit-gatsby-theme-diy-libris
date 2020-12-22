@@ -43,11 +43,14 @@ You can create a site on Stackbit and import this repository to kickstart your o
 If you want to allow visitors to edit the website's docs and blogs posts, you will need to host your website on GitHub, although there are alternative ways through Identity and Git-Gateway (see [here](https://www.netlifycms.org/docs/open-authoring/) for the details about open_authoring and [here to enable Netlify Identity and Git-Gateway](https://docs.netlify.com/visitor-access/git-gateway/#setup-and-settings)). You also need to edit `/static/admin/config.yml` to update the `repo` field to point to your github repository's address (only the username and repo name, not the entire URL). And finally, you will need to [create a new OAuth on your GitHub account](https://github.com/settings/applications/new) with the authorization callback URL set to `https://api.netlify.com/auth/done` and then input the client ID and secret key into Netlify as outlined in [this great article](https://www.stackbit.com/blog/jamstack-documentation-sites/).
 
 ## Additional features
+Beyond the merge between the DIY and Libris themes of Stackbit to provide docs inside the DIY (showcase+blog) theme, here are a few additional features that were implemented:
+
 * Automatic code syntax highlighting in MDX files using [gatsby-remark-highlight-code](https://www.gatsbyjs.com/plugins/gatsby-remark-highlight-code/) (Prism was disabled by default, and it required specifying the language).
 * Site-wide local search engine using [gatsby-plugin-lunr](https://github.com/humanseelabs/gatsby-plugin-lunr).
 * Easy collaborative editing of docs and blog posts via NetlifyCMS visual editor. If you want to disable, you can remove the netlifyCMS plugin (`gatsby-plugin-netlify-cms`) in `gatsby-config.js` and remove the "Edit this page" buttons in `src/templates/docs.js` and `src/templates/post.js`.
 * Added `short_bio` field for authors to display at the end of blog posts (and is editable in NetlifyCMS, this is a workaround to the fact we can't create new template-based .md files with this CMS, so like that external contributors can create their own short bio easily). The display of short bio can be enabled on a per post basis via a boolean `show_author_bio`.
 * Added `related_posts` field for blog posts.
+* A new component MarkdownContent to style markdown content from arbitrary sources.
 
 ## Missing features
 
