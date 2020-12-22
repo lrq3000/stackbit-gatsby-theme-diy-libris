@@ -6,7 +6,7 @@
 
 Type: Gatsby theme.
 Features: Showcase + blog + docs + collaborative open authoring.
-Content storage: git + MDX (markdown + JSX).
+Content storage: git + Markdown.
 
 This is a [Gatsby](https://gatsbyjs.com) theme using Git as a [CMS](https://en.wikipedia.org/wiki/Content_management_system) that can be imported in for [Stackbit Studio](https://www.stackbit.com?utm_source=project-readme&utm_medium=referral&utm_campaign=user_themes)'s visual editor. Every pages are visually editable with Stackbit Studio, and blog posts and docs are also editable by external contributors through GitHub via NetlifyCMS (the main repo will get a pull request for review). Stackbit studio can edit virtually any page and any content as long as its defined in stackbit.yml. Further customization through raw files editing or Gatsby plugins is possible.
 
@@ -59,6 +59,8 @@ If you want to allow visitors to edit the website's docs and blogs posts, you wi
 
 * blog posts' categories and tags should be generated using a template instead of one md file for each that needs to be manually created. They should even be automatically generated from blog posts directly, without requiring a `data` yaml file definition.
     * For the time being, newly created tags, categories and authors through NetlifyCMS have no link to a dedicated listing/bio page, but they can be manually created by raw files editing or via the Stackbit Studio's visual editor.
+
+* MDX is not supported, although it should be possible [to migrate](https://www.gatsbyjs.com/docs/how-to/routing/migrate-remark-to-mdx/) (see also [here](https://www.aboutmonica.com/blog/thoughts-on-migrating-from-markdown-to-mdx)).
 
 ## License
 

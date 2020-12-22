@@ -8,6 +8,7 @@ import {classNames, withPrefix, htmlToReact, Link, getPage} from '../utils';
 import BlogPostCategories from '../components/BlogPostCategories';
 import BlogPostAuthor from '../components/BlogPostAuthor';
 import BlogPostTags from '../components/BlogPostTags';
+import BlogPostAuthorCard from '../components/BlogPostAuthorCard';
 
 // this minimal GraphQL query ensures that when 'gatsby develop' is running,
 // any changes to content files are reflected in browser
@@ -63,7 +64,12 @@ export default class Post extends React.Component {
             		</div>
             		{_.get(this.props, 'pageContext.frontmatter.tags', null) && (
             		<footer className="post__footer mt-4 mt-md-5">
-            			<BlogPostTags {...this.props} tags={_.get(this.props, 'pageContext.frontmatter.tags', null)} />
+                        <div class='post__footer_tags'>
+                            <BlogPostTags {...this.props} tags={_.get(this.props, 'pageContext.frontmatter.tags', null)} />
+                        </div>
+                        {_.get(this.props, 'pageContext.frontmatter.author', null) && (
+                            <BlogPostAuthorCard {...this.props} author={_.get(this.props, 'pageContext.frontmatter.author', null)} container_class={'post__footer_authorcard'} avatar_size={'big'} />
+                        )}
             		</footer>
             		)}
                     {(_.get(this.props, 'pageContext.frontmatter.related_posts', []).length > 0) && (
