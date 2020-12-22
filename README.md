@@ -60,7 +60,7 @@ If you want to allow visitors to edit the website's docs and blogs posts, you wi
 * blog posts' categories and tags should be generated using a template instead of one md file for each that needs to be manually created. They should even be automatically generated from blog posts directly, without requiring a `data` yaml file definition.
     * For the time being, newly created tags, categories and authors through NetlifyCMS have no link to a dedicated listing/bio page, but they can be manually created by raw files editing or via the Stackbit Studio's visual editor.
 
-* MDX is not supported, although it should be possible [to migrate](https://www.gatsbyjs.com/docs/how-to/routing/migrate-remark-to-mdx/) (see also [here](https://www.aboutmonica.com/blog/thoughts-on-migrating-from-markdown-to-mdx)).
+* MDX ((Markdown + JSX)[https://mdxjs.com]) is not supported, although it should be possible [to migrate](https://www.gatsbyjs.com/docs/how-to/routing/migrate-remark-to-mdx/) (see also [here](https://www.aboutmonica.com/blog/thoughts-on-migrating-from-markdown-to-mdx)). However, it's possible to integrate raw HTML code inside Markdown content, it will be automatically parsed by `utils/htmlToReact.js`.
 
 ## License
 

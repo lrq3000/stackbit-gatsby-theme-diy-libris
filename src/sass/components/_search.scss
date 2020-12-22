@@ -4,6 +4,7 @@
 
 .search__parent__div {
     // Center the search box
+    display: block;
     margin: auto;
     text-align: center;
     vertical-align: center;
@@ -20,6 +21,7 @@
     margin: 0;
     border-radius: 25px !important;
     transition: .5s ease;  // smooth animations. By defining it here, it will apply to both hovering and dehovering.
+
     &:hover,
     &:active,
     &:focus {
@@ -27,12 +29,20 @@
     }
 }
 
+@media (max-width: 801px) {
+    .search__parent__div {
+        margin: auto;
+        width: 100%;
+    }
+}
+
 .search__list {
     position: absolute;
-    display: inline-block;
+    display: none;  // hide by default, it will be shown when the search bar is in focus
     z-index: 999;
     background: white;
     top: 100%; // place below parent
+    left: 0; // also align with left side of the parent (and since width is 100% it will also align the right side)
     border: 1px lightgrey solid !important;
     width: 100%;
     
@@ -41,13 +51,16 @@
         & a {
             text-decoration: none;
 
-            /*
             &:hover,
             &:focus,
             &:active {
                 text-decoration: underline;
             }
-            */
         }
     }
+}
+
+.search__input:focus ~ .search__list, .search__list:focus, .search__list:active, .search__list:hover {
+    // Display the search results popup when either the search bar or the search results popup is in focus or hovered
+    display: inline-block;
 }
