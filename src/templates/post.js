@@ -27,6 +27,8 @@ export default class Post extends React.Component {
         if (_.get(this.props, 'pageContext.frontmatter.image', null)) {
              has_image = true;
         }
+        let author = _.get(this.props, 'pageContext.frontmatter.author', null);
+        let show_author_bio = _.get(this.props, 'pageContext.frontmatter.show_author_bio', null);
         let netlifycms_url = "/admin/#/collections/blog/new";  // create a new blog post instead of editing a pre-existent one
         let netlifycms_url2 = "/admin/#/edit/" + _.trim(_.get(this.props, 'pageContext.relativePath', null), '/');  // build path to edit this page with NetlifyCMS, cannot use Gatsby's Link component since NetlifyCMS is not present at build time but only after building static so Link fails, need to use <a> instead
         netlifycms_url2 = netlifycms_url2.substring(0, netlifycms_url2.lastIndexOf('.'));  // remove the file extension if present
@@ -52,26 +54,31 @@ export default class Post extends React.Component {
             				{_.get(this.props, 'pageContext.frontmatter.subtitle', null) && (
             					<p className="post__subtitle">{_.get(this.props, 'pageContext.frontmatter.subtitle', null)}</p>
             				)}
-            				{_.get(this.props, 'pageContext.frontmatter.author', null) && (
-            					<BlogPostAuthor {...this.props} author={_.get(this.props, 'pageContext.frontmatter.author', null)} container_class={'post__byline'} avatar_size={'medium'} />
+            				{author && (
+            					<BlogPostAuthor {...this.props} author={author} container_class={'post__byline'} avatar_size={'medium'} />
             				)}
             			</header>
             		</div>
             	</div>
+
             	<div className="container container--medium">
+
             		<div className="post__body text-block">
             			{htmlToReact(_.get(this.props, 'pageContext.html', null))}
             		</div>
+
             		{_.get(this.props, 'pageContext.frontmatter.tags', null) && (
             		<footer className="post__footer mt-4 mt-md-5">
                         <div class='post__footer_tags'>
                             <BlogPostTags {...this.props} tags={_.get(this.props, 'pageContext.frontmatter.tags', null)} />
                         </div>
-                        {_.get(this.props, 'pageContext.frontmatter.author', null) && (
-                            <BlogPostAuthorCard {...this.props} author={_.get(this.props, 'pageContext.frontmatter.author', null)} container_class={'post__footer_authorcard'} avatar_size={'big'} />
+
+                        {show_author_bio && author && (
+                            <BlogPostAuthorCard {...this.props} author={author} container_class={'post__footer_authorcard'} avatar_size={'big'} />
                         )}
             		</footer>
             		)}
+
                     {(_.get(this.props, 'pageContext.frontmatter.related_posts', []).length > 0) && (
                         <div className="post__related">
                             <h4>Related posts:</h4>
@@ -89,6 +96,7 @@ export default class Post extends React.Component {
                             </ul>
                         </div>
                     )}
+
                     <div className="post__netlifycms center-content">
                         <span>Got an idea to communicate? Want to share your story?</span>
                         <br />
@@ -96,7 +104,9 @@ export default class Post extends React.Component {
                         <br />
                         <a href={netlifycms_url2}>(or have a look at how this post was edited)</a>
                     </div>
+
             	</div>
+
             </article>
             </Layout>
         );

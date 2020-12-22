@@ -32,6 +32,7 @@ export default class BlogPostAuthorCard extends React.Component {
             		<span>{author_data.first_name} {author_data.last_name}</span>
             	</div>
             	}
+
                 <MarkdownContent content={author_data.short_bio} />
             </div>
         );

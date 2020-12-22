@@ -21,6 +21,7 @@ related_posts:
   - src/pages/blog/post-4.md
   - src/pages/blog/post-6.md
   - src/pages/blog/post-2.md
+show_author_bio: true
 template: post
 cmseditable: true
 ---
