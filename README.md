@@ -4,13 +4,17 @@
 
 <img src="https://themes.stackbit.com/images/diy-demo-1024x768.png" width="600">
 
-This is a [Gatsby](https://gatsbyjs.com) theme using Git as a [CMS](https://en.wikipedia.org/wiki/Content_management_system) that can be imported in for [Stackbit Studio](https://www.stackbit.com?utm_source=project-readme&utm_medium=referral&utm_campaign=user_themes)'s visual editor.
+Type: Gatsby theme.
+Features: Showcase + blog + docs + collaborative open authoring.
+Content storage: git + MDX (markdown + JSX).
 
-It combines the [DIY theme](https://github.com/stackbithq/stackbit-theme-diy), which provides more extensive customization than other themes, and detailed blog posts with tags, categories, author and frontmatter image positioning, with the [Libris theme](https://github.com/stackbithq/stackbit-theme-libris)'s docs section, providing a MDX-based documentation that can also be edited in Stackbit Studio's visual editor.
+This is a [Gatsby](https://gatsbyjs.com) theme using Git as a [CMS](https://en.wikipedia.org/wiki/Content_management_system) that can be imported in for [Stackbit Studio](https://www.stackbit.com?utm_source=project-readme&utm_medium=referral&utm_campaign=user_themes)'s visual editor. Every pages are visually editable with Stackbit Studio, and blog posts and docs are also editable by external contributors through GitHub via NetlifyCMS (the main repo will get a pull request for review). Stackbit studio can edit virtually any page and any content as long as its defined in stackbit.yml. Further customization through raw files editing or Gatsby plugins is possible.
 
-This theme further includes additional plugins and edits to make the site collaborative and editable to external contributors through Git pull requests and optionally using NetlifyCMS as a visual editor for docs and blog posts for non-technical contributors.
+This theme combines the [DIY theme](https://github.com/stackbithq/stackbit-theme-diy), which provides more extensive customization than other themes, and detailed blog posts with tags, categories, author and frontmatter image positioning, with the [Libris theme](https://github.com/stackbithq/stackbit-theme-libris)'s docs section, providing a MDX-based documentation that can also be edited in Stackbit Studio's visual editor.
 
-It's a full Gatsby website, it can be used as a starter without Stackbit, or it can be imported into Stackbit to leverage Stackbit Studio's visual editor for the whole website.
+This theme further includes additional plugins and edits to make the site collaborative and editable to external contributors through Git pull requests and optionally using NetlifyCMS in Open Authoring mode as a visual editor for docs and blog posts for non-technical contributors. Indeed, Stackbit Studio can visually edit anything, but invited contributors will have the same permissions as the admin, whereas with NetlifyCMS external contributions will show up as Pull Requests for further review before merging in.
+
+It's a full Gatsby website, it can be used as a starter without Stackbit (NetlifyCMS will still work), or it can be imported into Stackbit to leverage Stackbit Studio's visual editor for the whole website.
 
 ## Preview
 
@@ -40,8 +44,10 @@ If you want to allow visitors to edit the website's docs and blogs posts, you wi
 
 ## Additional features
 * Automatic code syntax highlighting in MDX files using [gatsby-remark-highlight-code](https://www.gatsbyjs.com/plugins/gatsby-remark-highlight-code/) (Prism was disabled by default, and it required specifying the language).
-* Local search engine using [gatsby-plugin-lunr](https://github.com/humanseelabs/gatsby-plugin-lunr).
+* Site-wide local search engine using [gatsby-plugin-lunr](https://github.com/humanseelabs/gatsby-plugin-lunr).
 * Easy collaborative editing of docs and blog posts via NetlifyCMS visual editor. If you want to disable, you can remove the netlifyCMS plugin (`gatsby-plugin-netlify-cms`) in `gatsby-config.js` and remove the "Edit this page" buttons in `src/templates/docs.js` and `src/templates/post.js`.
+* Added `short_bio` field for authors to display at the end of blog posts (and is editable in NetlifyCMS, this is a workaround to the fact we can't create new template-based .md files with this CMS, so like that external contributors can create their own short bio easily). The display of short bio can be enabled on a per post basis via a boolean `show_author_bio`.
+* Added `related_posts` field for blog posts.
 
 ## Missing features
 
