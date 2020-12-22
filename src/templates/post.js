@@ -71,7 +71,8 @@ export default class Post extends React.Component {
                             <h4>Related posts:</h4>
                             <ul>
                                 {_.map(_.get(this.props, 'pageContext.frontmatter.related_posts', null), (absPostURL, post_idx) => {
-                                    let postSlug = absPostURL.split('/').slice(-1);
+                                    let postSlug = absPostURL.split('/').slice(-1).toString();
+                                    postSlug = postSlug.substring(0, postSlug.lastIndexOf('.'));  // remove the file extension if present
                                     let relPostContext = getPage(this.props.pageContext.pages, _.get(this.props, 'pageContext.relativeDir', '')+'/'+postSlug);
                                     let relPostTitle = _.get(relPostContext, 'frontmatter.title', '');
                                     let relPostURL = _.get(relPostContext, 'url', null);
