@@ -17,6 +17,9 @@ categories:
 tags:
   - src/data/tags/stackbit.yaml
   - src/data/tags/netlify.yaml
+related_posts:
+  - post-6
+  - post-4
 cmseditable: true
 ---
 
