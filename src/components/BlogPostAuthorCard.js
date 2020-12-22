@@ -1,6 +1,8 @@
 import React from 'react';
 import _ from 'lodash';
 
+import {MarkdownContent} from '../components/index';
+
 import {getData, Link, withPrefix, classNames} from '../utils';
 
 export default class BlogPostAuthorCard extends React.Component {
@@ -30,7 +32,7 @@ export default class BlogPostAuthorCard extends React.Component {
             		<span>{author_data.first_name} {author_data.last_name}</span>
             	</div>
             	}
-                <div dangerouslySetInnerHTML={{ __html: author_data.short_bio }}></div>
+                <MarkdownContent content={author_data.short_bio} />
             </div>
         );
     }

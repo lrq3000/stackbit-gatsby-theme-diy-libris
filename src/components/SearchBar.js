@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Link } from 'gatsby'
 
-export default class Search extends React.Component {
+export default class SearchBar extends React.Component {
   state = {
     query: '',
     results: [],

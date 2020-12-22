@@ -2,8 +2,7 @@ import React from 'react';  // Layout for the docs section, this comes from Stac
 import _ from 'lodash';
 import {graphql} from 'gatsby';
 
-import {Layout} from '../components/index';
-import DocsMenu from '../components/DocsMenu';
+import {Layout, DocsMenu} from '../components/index';
 import {htmlToReact, getPages, Link, withPrefix} from '../utils';
 
 // Code syntax highlighter

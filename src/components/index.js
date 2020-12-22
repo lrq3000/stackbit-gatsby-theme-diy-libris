@@ -6,6 +6,7 @@ import BlogPostAuthor from './BlogPostAuthor';
 import BlogPostCategories from './BlogPostCategories';
 import BlogPostFeedItem from './BlogPostFeedItem';
 import BlogPostTags from './BlogPostTags';
+import BlogPostAuthorCard from './BlogPostAuthorCard';
 import CtaSection from './CtaSection';
 import Feature from './Feature';
 import FeaturesSection from './FeaturesSection';
@@ -23,6 +24,8 @@ import HeroSection from './HeroSection';
 import SectionDocs from './SectionDocs';
 import Icon from './Icon';
 import SectionActions from './SectionActions';
+import SearchBar from './SearchBar';
+import MarkdownContent from './MarkdownContent';
 import Layout from './Layout';
 
 export {
@@ -34,6 +37,7 @@ export {
     BlogPostCategories,
     BlogPostFeedItem,
     BlogPostTags,
+    BlogPostAuthorCard,
     CtaSection,
     Feature,
     FeaturesSection,
@@ -51,6 +55,8 @@ export {
     SectionDocs,
     Icon,
     SectionActions,
+    SearchBar,
+    MarkdownContent,
     Layout
 };
 
@@ -63,6 +69,7 @@ export default {
     BlogPostCategories,
     BlogPostFeedItem,
     BlogPostTags,
+    BlogPostAuthorCard,
     CtaSection,
     Feature,
     FeaturesSection,
@@ -80,5 +87,7 @@ export default {
     SectionDocs,
     Icon,
     SectionActions,
+    SearchBar,
+    MarkdownContent,
     Layout
 };
