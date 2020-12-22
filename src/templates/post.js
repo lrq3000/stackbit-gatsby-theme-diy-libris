@@ -4,7 +4,7 @@ import moment from 'moment-strftime';
 import {graphql} from 'gatsby';
 
 import {Layout} from '../components/index';
-import {classNames, withPrefix, htmlToReact} from '../utils';
+import {classNames, withPrefix, htmlToReact, Link, getPage} from '../utils';
 import BlogPostCategories from '../components/BlogPostCategories';
 import BlogPostAuthor from '../components/BlogPostAuthor';
 import BlogPostTags from '../components/BlogPostTags';
@@ -66,8 +66,23 @@ export default class Post extends React.Component {
             			<BlogPostTags {...this.props} tags={_.get(this.props, 'pageContext.frontmatter.tags', null)} />
             		</footer>
             		)}
-                    <hr />
-                    <div class="center-content">
+                    {(_.get(this.props, 'pageContext.frontmatter.related_posts', []).length > 0) && (
+                        <div className="post__related">
+                            <h4>Related posts:</h4>
+                            <ul>
+                                {_.map(_.get(this.props, 'pageContext.frontmatter.related_posts', null), (absPostURL, post_idx) => {
+                                    let postSlug = absPostURL.split('/').slice(-1);
+                                    let relPostContext = getPage(this.props.pageContext.pages, _.get(this.props, 'pageContext.relativeDir', '')+'/'+postSlug);
+                                    let relPostTitle = _.get(relPostContext, 'frontmatter.title', '');
+                                    let relPostURL = _.get(relPostContext, 'url', null);
+                                    return (
+                                        <li><Link to={relPostURL}>{relPostTitle}</Link></li>
+                                    )
+                                })}
+                            </ul>
+                        </div>
+                    )}
+                    <div className="post__netlifycms center-content">
                         <span>Got an idea to communicate? Want to share your story?</span>
                         <br />
                         <a href={netlifycms_url} class="button">Create your own post here!</a>

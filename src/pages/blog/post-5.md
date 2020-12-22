@@ -17,6 +17,9 @@ excerpt: >-
 thumb_image: /images/classic/post-5.png
 image: /images/classic/post-5.png
 image_position: right
+related_posts:
+  - src/pages/blog/post-4
+  - src/pages/blog/post-6
 template: post
 cmseditable: true
 ---

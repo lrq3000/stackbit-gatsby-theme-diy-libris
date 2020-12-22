@@ -261,10 +261,6 @@ models:
         description: 'A unique identifier used when filtering posts, e.g. "john-doe"'
         required: true
       - type: string
-        name: link
-        label: Link
-        description: 'The link to the author page, e.g. "blog/author/john-doe"'
-      - type: string
         name: first_name
         label: First name
         required: true
@@ -275,6 +271,14 @@ models:
         name: photo
         label: Photo
         description: The photo of the author
+      - type: text
+        name: short_bio
+        label: Short bio
+        description: 'A short biography to show at the end of blog posts (display can be decided per blog post)'
+      - type: string
+        name: link
+        label: Link
+        description: 'The link to the author page with more details, e.g. "blog/author/john-doe"'
   category:
     type: data
     label: Category
@@ -399,6 +403,15 @@ models:
         description: >-
           The featured image position in the blog post relative to the post
           header content
+      - type: boolean
+        name: show_author_bio
+        label: Show author's short bio?
+      - type: list
+        name: related_posts
+        label: Related posts
+        items:
+          type: reference
+          models: [post]
   doc_sections:
     type: data
     file: doc_sections.yml

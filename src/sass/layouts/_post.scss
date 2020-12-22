@@ -51,6 +51,29 @@
 	}
 }
 
+.post__related {
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: 1px solid lightgrey;
+
+    a {
+        text-decoration: none;
+        
+        &:hover,
+        &:focus,
+        &:active {
+            text-decoration: underline;
+        }
+    }
+}
+
+.post__netlifycms {
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: 1px solid lightgrey;
+    font-size: 90%;
+}
+
 @include media-breakpoint-down(lg) {
 	.post__hero {
 		max-width: container-max-width(medium);
