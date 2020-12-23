@@ -4,9 +4,9 @@
 
 <img src="https://themes.stackbit.com/images/diy-demo-1024x768.png" width="600">
 
-Type: Gatsby theme.
-Features: Showcase + blog + docs + collaborative open authoring.
-Content storage: git + Markdown.
+Type: Gatsby theme.\
+Features: Showcase + blog + docs + collaborative open authoring.\
+Content storage: git + Markdown.\
 
 This is a [Gatsby](https://gatsbyjs.com) theme using Git as a [CMS](https://en.wikipedia.org/wiki/Content_management_system) that can be imported in for [Stackbit Studio](https://www.stackbit.com?utm_source=project-readme&utm_medium=referral&utm_campaign=user_themes)'s visual editor. Every pages are visually editable with Stackbit Studio, and blog posts and docs are also editable by external contributors through GitHub via NetlifyCMS (the main repo will get a pull request for review). Stackbit studio can edit virtually any page and any content as long as its defined in stackbit.yml. Further customization through raw files editing or Gatsby plugins is possible.
 
