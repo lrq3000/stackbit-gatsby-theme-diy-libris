@@ -31,7 +31,7 @@ export default class BlogPostAuthorCard extends React.Component {
                     </div>
                 )}
 
-                <p className="authorcard_authorheader">Author:</p>
+                <p className="authorcard_authorheader">Author</p>
                 <p className="authorcard_name">
                     {author_data.link ? (
                         <Link to={withPrefix(author_data.link)}>{author_data.first_name} {author_data.last_name}</Link>
