@@ -2,11 +2,8 @@
  * General for docs
  */
 
-.docs-css {
-// Apply only to the docs section of the site
-font-size: 80%;
-
-// Palette.
+// Palette
+// Accent will get overwritten with the theme's primary color
 $palette: (
   "primary":           #424b5f,
   "secondary":         #283040,
@@ -18,6 +15,12 @@ $palette: (
   "accent":            #00c6ff,
   "accent-alt":        #0072ff,
 );
+
+.docs-css {
+// Apply only to the docs section of the site
+font-size: 80%;
+
+//$palette: map-set($palette, "accent", red); // just to test
 
 html {
   font-family: _font(primary);
@@ -653,6 +656,7 @@ img {
     font-weight: bold;
     padding: 0.9375em;
     position: relative;
+    text-decoration: none;
 
     &:hover {
       border-color: map-get($palette, accent);
@@ -1015,3 +1019,69 @@ img {
 }
 
 }
+
+// Redefine accent to match the theme's color
+// This needs to be placed outside of .docs-css to work
+@each $style in map-keys($theme-styles) {
+	$style-suffix: "#{$style}";
+	$colors: map-deep-get($theme-styles, $style, "colors");
+	@each $color, $value in $colors {
+		$color-suffix: "#{$color}";
+	
+		.style-#{$style-suffix} {
+			&.palette-#{$color-suffix} {
+				.docs-css {
+
+                    blockquote {
+                        border-left: $value;
+                    }
+                    
+                    .has-gradient {
+                      background: $value;
+                      background: -webkit-linear-gradient(left, map-get($palette, accent-alt), $value);
+                      background: linear-gradient(to right, map-get($palette, accent-alt), $value);
+                    }
+
+                    .line-left:before {
+                        background: $value;
+                    }
+
+                    .docs-section-items .docs-item-link:hover {
+                        border-color: $value;
+                        color: $value;
+                    }
+
+                    .docs-menu a {
+                        &:hover,
+                        &:focus {
+                          color: $value;
+                        }
+                    }
+
+                    .docs-menu-item {
+                        &.current,
+                        &.current-parent {
+                            color: $value;
+                        }
+                    }
+
+                    .page-nav {
+                        li.active > a {
+                            color: $value;
+                        }
+
+                        a {
+                            &:hover,
+                            &:focus {
+                                color: $value;
+                            }
+                        }
+                    }
+
+
+                }
+			}
+		}
+	}
+}
+

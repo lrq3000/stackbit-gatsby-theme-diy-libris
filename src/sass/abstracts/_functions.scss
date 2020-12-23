@@ -6,6 +6,11 @@
 	@return $map;
 }
 
+@function map-set($map, $key, $value) {
+    $new: ($key: $value);
+    @return map-merge($map, $new);
+}
+
 @function container-max-width($key) {
 	@return map-get($container-sizes, $key);
 }
