@@ -1,8 +1,8 @@
 ---
 title: My new blog post!
 template: post
-subtitle: rstrstuie
-excerpt: eauhirhretanruiet
+subtitle: ""
+excerpt: ""
 date: 2020-12-23T01:38:11.819Z
 image_position: right
 author: src/data/authors/hilary-ouse.yaml
