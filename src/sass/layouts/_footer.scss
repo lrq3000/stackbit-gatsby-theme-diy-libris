@@ -18,10 +18,15 @@
 .site-footer__copyright {
   font-size: 0.77778em;
 
-  & > span,
-  & > a {
-    margin-right: 5px;
-  }
+    & > span,
+    & > a {
+        margin-right: 5px;
+    }
+
+    img {
+        height: 1em;
+        vertical-align: middle;
+    }
 }
 
 .site-footer__social {
