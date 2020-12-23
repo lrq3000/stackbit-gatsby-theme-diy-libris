@@ -4,7 +4,7 @@
 
 <img src="https://themes.stackbit.com/images/diy-demo-1024x768.png" width="600">
 
-Type: Gatsby theme.\
+Type: Gatsby for Stackbit starter.\
 Features: Showcase + blog + docs + collaborative open authoring.\
 Content storage: git + Markdown.\
 
