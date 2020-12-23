@@ -15,7 +15,7 @@ export default class HeaderMenu extends React.Component {
                 let item_url = _.trim(_.get(item, 'url', null), '/');
                 let item_style = _.get(item, 'style', null) || 'link';
                 return (
-                	<li key={item_idx} className={classNames('menu__item', 'ml-md-3', {'is-active': (page_url === item_url) && (item_style === 'link'), 'menu__item-btn': item_style !== 'link'})}>
+                	<li key={item_idx} className={classNames('menu__item', 'ml-md-3', {'is-active': ((page_url === item_url) || page_url.startsWith(item_url) ) && (item_style === 'link'), 'menu__item-btn': item_style !== 'link'})}>
                 		<Action {...this.props} action={item} />
                 	</li>
                 )
