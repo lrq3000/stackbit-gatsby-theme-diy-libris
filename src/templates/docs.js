@@ -26,6 +26,7 @@ export default class Docs extends React.Component {
         //let netlifycms_url = "/admin/#/edit/" + _.trim(_.get(this.props, 'pageContext.relativePath', null), '/');  // build path to edit this page with NetlifyCMS, cannot use Gatsby's Link component since NetlifyCMS is not present at build time but only after building static so Link fails, need to use <a> instead - FIXME: in the future when nested collections will be updated to play well with the edit API, uncomment this line and delete the next one, see https://github.com/netlify/netlify-cms/issues/4753
         let netlifycms_url = "/admin/#/collections/docs/entries/" + _.trim(_.get(this.props, 'pageContext.relativePath', null).slice(4), '/');  // build path to edit this page with NetlifyCMS, cannot use Gatsby's Link component since NetlifyCMS is not present at build time but only after building static so Link fails, need to use <a> instead
         netlifycms_url = netlifycms_url.substring(0, netlifycms_url.lastIndexOf('.'));  // remove the file extension if present
+        let excerpt = _.get(this.props, 'pageContext.frontmatter.excerpt');
         return (
             <Layout {...this.props}>
                 {
@@ -40,6 +41,9 @@ export default class Docs extends React.Component {
                       <h1 className="post-title line-left">{_.get(this.props, 'pageContext.frontmatter.title', null)}</h1>
                     </header>
                     <div className="post-content">
+                      {excerpt && (
+                          <p>{_.get(this.props, 'pageContext.frontmatter.excerpt')}</p>
+                      )}
                       {htmlToReact(_.get(this.props, 'pageContext.html', null))}
                       {(root_docs_path !== current_page_url) && ((() => {
                           let child_pages = _.orderBy(getPages(this.props.pageContext.pages, current_page_url), 'frontmatter.weight');
