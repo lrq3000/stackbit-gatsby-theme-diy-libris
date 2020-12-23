@@ -10,7 +10,7 @@ date: 2020-06-02
 image: /images/classic/post-5.png
 thumb_image: /images/classic/post-5.png
 image_position: right
-author: src/data/people/gustav-purpleson.yaml
+author: src/data/authors/gustav-purpleson.yaml
 categories:
   - src/data/categories/tutorials.yaml
   - src/data/categories/general.yaml
@@ -18,8 +18,7 @@ tags:
   - src/data/tags/stackbit.yaml
   - src/data/tags/netlify.yaml
 related_posts:
-  - post-6
-  - post-4
+  - src/pages/blog/post-1.md
 cmseditable: true
 ---
 
