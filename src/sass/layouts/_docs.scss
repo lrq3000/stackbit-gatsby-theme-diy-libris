@@ -690,7 +690,8 @@ img {
 }
 
 .docs-menu {
-  color: map-get($palette, secondary);
+  font-size: 110%;
+  //color: map-get($palette, secondary);
   font-weight: bold;
   line-height: 1.5;
   list-style: none;
@@ -718,7 +719,6 @@ img {
   border-left: 1px solid map-get($palette, border);
   color: map-get($palette, primary);
   display: none;
-  font-size: 90%;
   font-weight: normal;
   list-style: none;
   margin-top: 0.625rem;
