@@ -1,5 +1,5 @@
 /**
- * Search box
+ * SearchBar component styling
  */
 
 .search__parent__div {
@@ -60,7 +60,12 @@
     }
 }
 
-.search__input:focus ~ .search__list, .search__list:focus, .search__list:active, .search__list:hover {
+.search__input:focus ~ .search__list,
+.search__input:active ~ .search__list,
+.search__input:hover ~ .search__list,
+.search__list:focus,
+.search__list:active,
+.search__list:hover {
     // Display the search results popup when either the search bar or the search results popup is in focus or hovered
     display: inline-block;
 }
