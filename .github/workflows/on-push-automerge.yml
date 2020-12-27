@@ -19,7 +19,10 @@ jobs:
       with:
         stable_branch: 'master'
         development_branch: 'preview'
-        allow_ff: false
+        allow_ff: true
         allow_forks: true
+        allow_git_lfs: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+# For a list of all options, see: https://github.com/marketplace/actions/nightly-merge
