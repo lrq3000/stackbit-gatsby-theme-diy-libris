@@ -51,6 +51,8 @@ Beyond the merge between the DIY and Libris themes of Stackbit to provide docs i
 * Added `short_bio` field for authors to display at the end of blog posts (and is editable in NetlifyCMS, this is a workaround to the fact we can't create new template-based .md files with this CMS, so like that external contributors can create their own short bio easily). The display of short bio can be enabled on a per post basis via a boolean `show_author_bio`.
 * Added `related_posts` field for blog posts.
 * A new component MarkdownContent to style markdown content from arbitrary sources.
+* Some slight design adjustments especially for accessibility, such as the menu icon on small screens being grey now instead of black so that is stays visible when the browser is set in night mode (black background).
+* Includes a GitHub Action ([Nightly Merge Action](https://github.com/marketplace/actions/nightly-merge)) to merge all commits from master to the preview branch on every push. The preview branch is solely used by Stackbit to preview and commit its temporary changes, whereas openly authored content through netlifyCMS is pushed on the master branch, so this ensures that Stackbit always include changes done through netlifyCMS.
 
 ## Missing features
 
