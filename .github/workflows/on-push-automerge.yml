@@ -20,6 +20,7 @@ jobs:
         stable_branch: 'master'
         development_branch: 'preview'
         allow_ff: true
+        only_ff: true # to avoid the "Merged branch x into x" commits that will cause headaches when later trying to merge the dev branch back to master...
         allow_forks: true
         allow_git_lfs: true
       env:
