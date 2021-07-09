@@ -14,7 +14,6 @@
     "@stackbit/gatsby-plugin-menus": "0.0.4",
     "chokidar": "^3.4.0",
     "classnames": "^2.2.6",
-    "esm": "^3.2.25",
     "fs-extra": "^7.0.1",
     "gatsby": "^2.29.2",
     "gatsby-plugin-lunr": "^1.5.2",
