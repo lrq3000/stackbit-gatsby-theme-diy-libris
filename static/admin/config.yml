@@ -13,6 +13,8 @@ backend:
 media_folder: /static/images/uploads  # where media files such as images will be stored
 public_folder: /images/uploads  # url to media files when deployed
 
+show_preview_links: true  # see https://www.netlifycms.org/docs/deploy-preview-links/
+
 # site_url: https://your-site.com  # edit and uncomment this line to enable previews
 # display_url: https://your-site.com
 # logo_url: https://your-site.com/images/logo.svg  # custom logo
@@ -25,6 +27,7 @@ collections:
     create: true
     #path: '/'  # allows to walk inside folders, see https://www.netlifycms.org/docs/beta-features/#folder-collections-path and https://github.com/netlify/netlify-cms/issues/513 and nested collections which allow for recursive subfolders walking without requiring a specific path template: https://www.netlifycms.org/docs/beta-features/#nested-collections
     slug: "{{title}}/index"
+    preview_path: "src/pages/docs/preview/{{slug}}"
     #extension: md
     media_folder: '{{media_folder}}/docs'
     # adding a nested object will show the collection folder structure, see https://www.netlifycms.org/docs/beta-features/#nested-collections and https://github.com/netlify/netlify-cms/issues/4741#issuecomment-748627801
@@ -45,6 +48,7 @@ collections:
     folder: src/pages/blog  # relative url where the editable documents are stored
     create: true  # allow users to create new documents in this collection
     slug: "{{title}}"  # filename template, the adequate file extension (e.g., .md) will be automatically added
+    preview_path: "src/pages/blog/preview/{{title}}"
     extension: md
     media_folder: '{{media_folder}}/blog'
     summary: "{{title}} published by {{commit_author}} ({{commit_date}})"
