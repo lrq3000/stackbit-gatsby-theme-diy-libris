@@ -1,9 +1,9 @@
 ---
-title: Typography
+title: New page
 weight: 1
 template: docs
+excerpt: This is a new page
 ---
-
 <div class="note">
   <strong>Note:</strong> 
   This is the demo content for demonstration purpose only. The primary function of this content is to show you what this theme can do. There is a more detailed explanation in the <strong>Getting Started</strong> section.
@@ -11,7 +11,7 @@ template: docs
 
 **This is a paragraph**. Pellentesque habitant morbi *tristique senectus et netus et malesuada* fames ac turpis egestas. Vestibulum [this is link](https://www.stackbit.com/), feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit <mark>amet est et sapien ullamcorper</mark> pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.
 
-## This is an H2
+## This is an H10
 
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim. Suspendisse id velit vitae ligula volutpat condimentum. Aliquam erat volutpat. Sed quis velit. Nulla facilisi. Nulla libero.
 
@@ -25,19 +25,19 @@ Quisque facilisis erat a dui. Nam malesuada ornare dolor. Cras gravida, diam sit
 
 ## Quoting
 
->“How well we communicate is determined not by how well we say things, but how well we are understood.” ― Andrew Grove
-
->“Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live” ― John Woods
+> “How well we communicate is determined not by how well we say things, but how well we are understood.” ― Andrew Grove
+>
+> “Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live” ― John Woods
 
 <hr />
 
 ## Unordered Lists
 
-+ Donec non tortor in arcu mollis feugiat
-+ Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-+ Donec id eros eget quam aliquam gravida
-+ Vivamus convallis urna id felis
-+ Nulla porta tempus sapien
+* Donec non tortor in arcu mollis feugiat
+* Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+* Donec id eros eget quam aliquam gravida
+* Vivamus convallis urna id felis
+* Nulla porta tempus sapien
 
 ## Ordered Lists
 
@@ -46,7 +46,6 @@ Quisque facilisis erat a dui. Nam malesuada ornare dolor. Cras gravida, diam sit
 3. Donec id eros eget quam aliquam gravida
 4. Vivamus convallis urna id felis
 5. Nulla porta tempus sapien
-
 
 ## Code Blocks
 
